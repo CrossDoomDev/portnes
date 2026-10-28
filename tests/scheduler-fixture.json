@@ -1,0 +1,21 @@
+{
+  "source": "Original CA44 scheduler with verified D0C6 empty AI handler",
+  "order": [
+    0,
+    1,
+    2,
+    6,
+    7,
+    8,
+    12,
+    13,
+    14,
+    18,
+    19,
+    20,
+    24,
+    25,
+    26
+  ],
+  "sha256": "39764ec61181a4ffe8fa0127fd01acbd9018a10e9f25f5b949eaa6b8d53ba956"
+}

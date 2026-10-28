@@ -1,0 +1,88 @@
+{
+  "source": "Original CA44 script scheduler with development-only injected domain scripts",
+  "fixtures": [
+    {
+      "graph": {
+        "cmd_b000": {
+          "action": "face",
+          "value": 3,
+          "next": "cmd_b001"
+        },
+        "cmd_b001": {
+          "action": "switchAI",
+          "value": 0,
+          "kind": 7
+        }
+      },
+      "flags": 0,
+      "frames": 64,
+      "start": "cmd_b000",
+      "sha256": "afb5b5c5d7f52764261d1217be8d70da27c3f38a61358b4c6b1559912b05b019"
+    },
+    {
+      "graph": {
+        "cmd_b000": {
+          "action": "face",
+          "value": 3,
+          "next": "cmd_b001"
+        },
+        "cmd_b001": {
+          "action": "switchAI",
+          "value": 0,
+          "kind": 7
+        }
+      },
+      "flags": 8,
+      "frames": 64,
+      "start": "cmd_b000",
+      "sha256": "40e912ad886523d403753e71cc746916a3f2e04185354f49a139193027449060"
+    },
+    {
+      "graph": {
+        "cmd_b000": {
+          "action": "wait",
+          "value": 2,
+          "next": "cmd_b001"
+        },
+        "cmd_b001": {
+          "action": "switchAI",
+          "value": 0,
+          "kind": 7
+        }
+      },
+      "flags": 0,
+      "frames": 64,
+      "start": "cmd_b000",
+      "sha256": "7d1a39a0679fecb9c706bdda2ee2f995c38bd1747fb7edaa2595d28fb85434d1"
+    },
+    {
+      "graph": {
+        "cmd_b000": {
+          "action": "speed",
+          "value": 5,
+          "next": "cmd_b001"
+        },
+        "cmd_b001": {
+          "action": "fallbackAI",
+          "value": 0,
+          "kind": 36,
+          "next": "cmd_b003"
+        },
+        "cmd_b003": {
+          "action": "wait",
+          "value": 1,
+          "next": "cmd_b004"
+        },
+        "cmd_b004": {
+          "action": "switchAI",
+          "value": 0,
+          "kind": 7
+        }
+      },
+      "flags": 0,
+      "frames": 64,
+      "start": "cmd_b000",
+      "sha256": "9e34fdaa6ebdafb6e8758183584e33d4c7c4c376e65e8dc1ffbe4ef44641805c"
+    }
+  ]
+}

@@ -1,0 +1,555 @@
+{
+  "dispatch": [
+    "d0c6",
+    "e717",
+    "e71f",
+    "eb90",
+    "d0c7",
+    "d0c7",
+    "cde5",
+    "d0c6",
+    "eb90",
+    "e785",
+    "d0c6",
+    "dae4",
+    "dacb",
+    "d098",
+    "d415",
+    "d2dc",
+    "d537",
+    "d2ff",
+    "d5c4",
+    "d386",
+    "d6ab",
+    "d325",
+    "daec",
+    "d3b4",
+    "d686",
+    "e6bb",
+    "d0f2",
+    "d045",
+    "d170",
+    "d1b9",
+    "dff3",
+    "d1a1",
+    "de88",
+    "de43",
+    "de0b",
+    "d16f",
+    "dc6e",
+    "dd4e",
+    "ddac",
+    "ddd3",
+    "ddec",
+    "df27",
+    "df27",
+    "df28",
+    "dbe9",
+    "e02b",
+    "e02b",
+    "d01e",
+    "df29",
+    "df29",
+    "d9ac",
+    "d9ac",
+    "d855",
+    "d8c3",
+    "d0c6",
+    "d8de",
+    "de64",
+    "df71",
+    "df7c",
+    "df7c",
+    "da1a",
+    "da86",
+    "d7df",
+    "db9c",
+    "daff",
+    "e733",
+    "e655",
+    "d0c6",
+    "d339",
+    "d351",
+    "d36b",
+    "d379",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d802",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "cda0",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "e074",
+    "d16f",
+    "d0c6"
+  ],
+  "handlers": [
+    {
+      "entry": "d0c6",
+      "kinds": [
+        0, 7, 10, 54, 67, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84,
+        85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 97, 98, 99, 100, 101, 102,
+        103, 104, 105, 106, 107, 108, 109, 110, 111, 113, 114, 115, 116, 117,
+        118, 119, 120, 121, 122, 123, 124, 127
+      ],
+      "implemented": true,
+      "empty": true,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "e717",
+      "kinds": [1],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "e71f",
+      "kinds": [2],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "eb90",
+      "kinds": [3, 8],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "d0c7",
+      "kinds": [4, 5],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "cde5",
+      "kinds": [6],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "e785",
+      "kinds": [9],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "dae4",
+      "kinds": [11],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "dacb",
+      "kinds": [12],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "d098",
+      "kinds": [13],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "d415",
+      "kinds": [14],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "d2dc",
+      "kinds": [15],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "d537",
+      "kinds": [16],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "d2ff",
+      "kinds": [17],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "d5c4",
+      "kinds": [18],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "d386",
+      "kinds": [19],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "d6ab",
+      "kinds": [20],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "d325",
+      "kinds": [21],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "daec",
+      "kinds": [22],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "d3b4",
+      "kinds": [23],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "d686",
+      "kinds": [24],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "e6bb",
+      "kinds": [25],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "d0f2",
+      "kinds": [26],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "d045",
+      "kinds": [27],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "d170",
+      "kinds": [28],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "d1b9",
+      "kinds": [29],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "dff3",
+      "kinds": [30],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "d1a1",
+      "kinds": [31],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "de88",
+      "kinds": [32],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "de43",
+      "kinds": [33],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "de0b",
+      "kinds": [34],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "d16f",
+      "kinds": [35, 126],
+      "implemented": true,
+      "empty": true,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "dc6e",
+      "kinds": [36],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "dd4e",
+      "kinds": [37],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "ddac",
+      "kinds": [38],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "ddd3",
+      "kinds": [39],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "ddec",
+      "kinds": [40],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "df27",
+      "kinds": [41, 42],
+      "implemented": true,
+      "empty": true,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "df28",
+      "kinds": [43],
+      "implemented": true,
+      "empty": true,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "dbe9",
+      "kinds": [44],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "e02b",
+      "kinds": [45, 46],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "d01e",
+      "kinds": [47],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "df29",
+      "kinds": [48, 49],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "d9ac",
+      "kinds": [50, 51],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "d855",
+      "kinds": [52],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "d8c3",
+      "kinds": [53],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "d8de",
+      "kinds": [55],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "de64",
+      "kinds": [56],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "df71",
+      "kinds": [57],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "df7c",
+      "kinds": [58, 59],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "da1a",
+      "kinds": [60],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "da86",
+      "kinds": [61],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "d7df",
+      "kinds": [62],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "db9c",
+      "kinds": [63],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "daff",
+      "kinds": [64],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "e733",
+      "kinds": [65],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "e655",
+      "kinds": [66],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "d339",
+      "kinds": [68],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "d351",
+      "kinds": [69],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "d36b",
+      "kinds": [70],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "d379",
+      "kinds": [71],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    },
+    {
+      "entry": "d802",
+      "kinds": [96],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "cda0",
+      "kinds": [112],
+      "implemented": false,
+      "empty": false
+    },
+    {
+      "entry": "e074",
+      "kinds": [125],
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+    }
+  ],
+  "totalDistinct": 64,
+  "nonNoop": 60,
+  "implemented": 27,
+  "implementedNonNoop": 23,
+  "remaining": 37
+}

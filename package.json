@@ -1,14 +1,15 @@
 {
-  "name": "portnes-iron-tank",
-  "version": "1.0.0",
+  "name": "portnes-native-work-in-progress",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Iron Tank browser adaptation with an isolated generated-material renderer",
+  "description": "Verified native JavaScript subsystems; full game port is not complete",
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "start": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
     "build": "node scripts/build.mjs",
-    "test": "node --test tests/*.test.mjs"
+    "audit": "node scripts/audit.mjs"
   },
   "engines": {
     "node": ">=20"

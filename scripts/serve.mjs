@@ -19,7 +19,6 @@ const types = {
   ".json": "application/json",
   ".svg": "image/svg+xml",
   ".webp": "image/webp",
-  ".nes": "application/octet-stream",
 };
 
 const server = http.createServer((request, response) => {

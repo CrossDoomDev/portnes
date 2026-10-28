@@ -1,0 +1,9 @@
+{
+  "pages": 512,
+  "mapRowsCompared": 15360,
+  "mapMetatilesCompared": 245760,
+  "distinctCollisionCases": 8552,
+  "actorRectangles": 8192,
+  "playerResolvers": 8192,
+  "status": "PASS"
+}
