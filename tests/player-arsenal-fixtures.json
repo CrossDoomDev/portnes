@@ -1,0 +1,40 @@
+{
+  "seed": 84619,
+  "routines": [
+    {
+      "name": "cannon",
+      "cases": 2048,
+      "sha256": "61aae5d03ce53e4af4a958f5d2fc2dd425ae30de16bdbe03d8a113ca1bf04ed3"
+    },
+    {
+      "name": "machineGun",
+      "cases": 2048,
+      "sha256": "399097f7d22b66765a13de82a599bde9d19e339ca7d50f58aeed45e971209a77"
+    },
+    {
+      "name": "consumeShot",
+      "cases": 2048,
+      "sha256": "87426fddd388da3715419862dee86255ebe30d29fe31ed5207c141aeb95aad71"
+    },
+    {
+      "name": "consume",
+      "cases": 2048,
+      "sha256": "b523de423c882e5bd116922c34474dbbb2c84b8bc4c0c833c75ba4deb86fe1ee"
+    },
+    {
+      "name": "toggle",
+      "cases": 2048,
+      "sha256": "415f57238f52fd3187c7e2b12eba95914857c44f8d50cddbf3252c838deb5e64"
+    },
+    {
+      "name": "pickup",
+      "cases": 2048,
+      "sha256": "f31f3db64550a77ef6149ccb1c16ba74c09e3e785a18561d23d7c9fa7a223dfd"
+    },
+    {
+      "name": "equipment",
+      "cases": 2048,
+      "sha256": "395197a8d76a47e6aefe8e698b5742daf6143c9046872620f892ce12b0047aab"
+    }
+  ]
+}

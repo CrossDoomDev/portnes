@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Verified native JavaScript subsystems; full game port is not complete",
+  "description": "Native JavaScript gameplay with new art/audio; full campaign verification is incomplete",
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "start": "node scripts/serve.mjs",

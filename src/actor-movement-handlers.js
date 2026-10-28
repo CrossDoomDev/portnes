@@ -21,10 +21,10 @@ export function createMovementHandlers(
       inactiveSteering: actors[16].scriptLow,
       inactiveRoute: state.inactiveRoute,
     });
-  function startAvoidance(actor, slot, frame) {
+  function startAvoidance(actor, slot, frame, context) {
     actor.turnTarget = 255;
     actor.rangeThreshold = 1;
-    motion.chooseTurn(actor, slot, frame);
+    motion.chooseTurn(actor, slot, frame, context);
     actor.heading = (actor.heading - actor.counter) & 7;
   }
   function advanceAvoidance(actor) {
@@ -64,7 +64,7 @@ export function createMovementHandlers(
     const desired = byte(actor.heading << 1);
     actor.heading = heading;
     motion.target(actor, desired);
-    if (blocked) startAvoidance(actor, slot, frame);
+    if (blocked) startAvoidance(actor, slot, frame, longRange ? "seek-long" : "seek");
   }
   function retreat(actor, slot, frame) {
     actor.timer = 15;
@@ -78,7 +78,7 @@ export function createMovementHandlers(
     const desired = byte(actor.heading << 1);
     actor.heading = heading;
     motion.target(actor, desired);
-    if (blocked) startAvoidance(actor, slot, frame);
+    if (blocked) startAvoidance(actor, slot, frame, "retreat");
   }
   function advance(actor, slot, frame, fallback) {
     if (actor.turnTarget !== 255) {
@@ -156,7 +156,7 @@ export function createMovementHandlers(
         return;
       }
       if (motion.probe(actor, slot, true)) {
-        startAvoidance(actor, slot, frame);
+        startAvoidance(actor, slot, frame, "route-probe");
         return;
       }
       const routing = sample(actor, frame).routing;
@@ -177,7 +177,7 @@ export function createMovementHandlers(
       const blocked = motion.probe(actor, slot, true);
       const desired = byte(actor.heading << 1);
       actor.heading = heading;
-      if (blocked) startAvoidance(actor, slot, frame);
+      if (blocked) startAvoidance(actor, slot, frame, "route-turn");
       else motion.target(actor, desired);
     },
     db9c(actor, slot, frame) {
@@ -194,7 +194,7 @@ export function createMovementHandlers(
           return;
         }
         actor.heading = 4;
-        if (motion.probe(actor, slot, true)) startAvoidance(actor, slot, frame);
+        if (motion.probe(actor, slot, true)) startAvoidance(actor, slot, frame, "vertical-probe");
       });
     },
   };

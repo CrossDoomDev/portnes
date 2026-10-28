@@ -74,7 +74,9 @@ export class GardenMusic {
     this.context = null;
     this.timer = null;
     this.step = 0;
+    this.theme = 0;
   }
+  setTheme(id) { this.theme = id % 4; }
   async start() {
     this.context ||= new AudioContext();
     await this.context.resume();
@@ -105,16 +107,17 @@ export class GardenMusic {
   }
   schedule() {
     if (!this.enabled) return;
-    const interval = 60 / 112 / 2;
+    const interval = 60 / [112, 120, 104, 128][this.theme] / 2;
     while (this.next < this.context.currentTime + 0.12) {
+      const transposition = [0, 5, -3, 7][this.theme];
       const melody = MELODY[this.step % MELODY.length];
       if (melody !== null) {
-        this.tone(melody, this.next, 0.24, 0.055, "sine");
-        this.tone(melody + 12, this.next, 0.09, 0.013, "triangle");
+        this.tone(melody + transposition, this.next, 0.24, 0.055, "sine");
+        this.tone(melody + transposition + 12, this.next, 0.09, 0.013, "triangle");
       }
       if (this.step % 2 === 0)
         this.tone(
-          BASS[(this.step >> 3) % 8],
+          BASS[(this.step >> 3) % 8] + transposition,
           this.next,
           0.25,
           0.06,

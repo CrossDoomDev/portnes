@@ -60,9 +60,9 @@ export function createActorLocomotion(data, effects, operations = {}) {
     actor.heading = (actor.heading + delta) & 7;
     if (delta === 0) actor.turnTarget = 255;
   }
-  function chooseTurn(actor, slot, frame) {
+  function chooseTurn(actor, slot, frame, context) {
     const random = byte(
-      requireOperation("random")("choose-turn", actor, slot, frame),
+      requireOperation("random")("choose-turn", actor, slot, frame, context),
     );
     if (actor.counter & 7) {
       actor.counter = -actor.counter & 7;

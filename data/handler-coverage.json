@@ -589,5 +589,8 @@
   "implemented": 64,
   "implementedNonNoop": 60,
   "remaining": 0,
-  "campaignIntegrationComplete": false
+  "campaignIntegrationComplete": false,
+  "commonGameLoopImplemented": true,
+  "playerWeaponsImplemented": true,
+  "pageEventsImplemented": true
 }

@@ -114,8 +114,9 @@ export class NativeActorSystem {
       (value) => {
         this.frameCounter = this.state.frameCounter = value;
       },
-      () => {
+      (actor) => {
         this.state.conversionSearchOffset = 76;
+        this.state.activeHandler = this.dispatch[actor.kind];
       },
     );
   }

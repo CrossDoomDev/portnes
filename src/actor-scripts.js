@@ -184,7 +184,7 @@ export function createScriptRunner(graph, motionData, operations = {}) {
         actor.scriptLow = 0;
         actor.scriptHigh = 0;
         actor.commandId = null;
-        actor.timer = 1;
+        actor.timer = 1 + (relative.directionFine & 1);
         actor.turnTarget = 255;
       }
     }

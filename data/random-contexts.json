@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "contexts": [
+    {
+      "key": "dc6e:choose-turn:seek",
+      "actorFieldOffset": 192,
+      "layoutFieldOffset": 196
+    },
+    {
+      "key": "dd4e:choose-turn:retreat",
+      "actorFieldOffset": 192,
+      "layoutFieldOffset": 196
+    },
+    {
+      "key": "ddac:choose-turn:retreat",
+      "actorFieldOffset": 192,
+      "layoutFieldOffset": 196
+    },
+    {
+      "key": "ddac:choose-turn:seek",
+      "actorFieldOffset": 192,
+      "layoutFieldOffset": 196
+    },
+    {
+      "key": "ddd3:choose-turn:seek",
+      "actorFieldOffset": 192,
+      "layoutFieldOffset": 196
+    },
+    {
+      "key": "ddec:choose-turn:retreat",
+      "actorFieldOffset": 192,
+      "layoutFieldOffset": 196
+    },
+    {
+      "key": "de0b:choose-turn:seek",
+      "actorFieldOffset": 192,
+      "layoutFieldOffset": 196
+    },
+    {
+      "key": "de0b:choose-turn:retreat",
+      "actorFieldOffset": 192,
+      "layoutFieldOffset": 196
+    },
+    {
+      "key": "de43:choose-turn:seek",
+      "actorFieldOffset": 192,
+      "layoutFieldOffset": 196
+    },
+    {
+      "key": "de43:choose-turn:retreat",
+      "actorFieldOffset": 192,
+      "layoutFieldOffset": 196
+    },
+    {
+      "key": "de88:choose-turn:route-probe",
+      "actorFieldOffset": 192,
+      "layoutFieldOffset": 196
+    },
+    {
+      "key": "de88:route-pause:",
+      "actorFieldOffset": 194,
+      "layoutFieldOffset": 198
+    },
+    {
+      "key": "de88:choose-turn:route-turn",
+      "actorFieldOffset": 192,
+      "layoutFieldOffset": 196
+    },
+    {
+      "key": "de88:choose-turn:seek-long",
+      "actorFieldOffset": 190,
+      "layoutFieldOffset": 194
+    },
+    {
+      "key": "db9c:choose-turn:vertical-probe",
+      "actorFieldOffset": 192,
+      "layoutFieldOffset": 196
+    },
+    {
+      "key": "cde5:death-y:",
+      "actorFieldOffset": 194,
+      "layoutFieldOffset": 198
+    },
+    {
+      "key": "cde5:death-x:",
+      "actorFieldOffset": 194,
+      "layoutFieldOffset": 198
+    }
+  ]
+}

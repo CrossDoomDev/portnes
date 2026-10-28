@@ -65,7 +65,7 @@ const server = http.createServer((request, response) => {
   }
 });
 server.listen(port, host, () => {
-  console.log(`Iron Tank ready at http://localhost:${server.address().port}`);
+  console.log(`Native game ready at http://localhost:${server.address().port}`);
 });
 process.on("SIGTERM", () => server.close());
 process.on("SIGINT", () => server.close());

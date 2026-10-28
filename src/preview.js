@@ -1,6 +1,9 @@
 import { NativePlayer, INPUT } from "./player.js";
 import { WorldMap } from "./world.js";
 import { GardenMusic } from "./music.js";
+import { NativeGame } from "./game.js";
+import { loadGameData } from "./game-data.js";
+import { drawGardenGame } from "./garden-renderer.js";
 const $ = (id) => document.getElementById(id),
   canvas = $("canvas"),
   context = canvas.getContext("2d");
@@ -20,20 +23,25 @@ const mapping = {
   KeyK: 128,
   KeyZ: 64,
   KeyJ: 64,
+  Enter: 16,
+  Tab: 32,
 };
-let view = "controls",
+let view = "game",
   paused = false,
   world,
   data,
   sprites,
   terrain,
   player,
+  game,
+  gameData,
   cannonCount = 0,
   machineCount = 0,
   flash = 0,
   last = 0,
   accumulator = 0,
   step = 0;
+let pendingMask = 0;
 const loadImage = (src) =>
   new Promise((resolve, reject) => {
     const image = new Image();
@@ -42,6 +50,23 @@ const loadImage = (src) =>
     image.src = src;
   });
 function reset() {
+  paused = false;
+  $("pause").textContent = "Пауза";
+  keys.clear(); touches.clear(); pendingMask = 0;
+  if (gameData) game = new NativeGame(gameData, {
+    onEvent(event) {
+      if (event.type === "shot") {
+        const cannon = event.value.kind !== "machineGun";
+        if (cannon) cannonCount++; else machineCount++;
+        music.pop(cannon);
+      } else if (event.type === "sound" && event.value < 32) music.setTheme(event.value);
+      else if (event.type === "message" || event.type === "radio") {
+        $("game-message").textContent = event.type === "radio"
+          ? `Получен сигнал ${event.value}. Откройте мастерскую: Tab → «Связь».`
+          : `Сообщение ${event.value} принято.`;
+      }
+    },
+  });
   player = new NativePlayer(
     {},
     {
@@ -60,6 +85,7 @@ function reset() {
   cannonCount = 0;
   machineCount = 0;
   step = 0;
+  $("game-message").textContent = "Стрелки — движение · X — пушка · Z — пулемёт и поворот башни · Tab — мастерская";
 }
 function inputMask() {
   let mask = 0;
@@ -70,6 +96,8 @@ function inputMask() {
     const down = (i) => pad.buttons[i]?.pressed;
     if (down(0)) mask |= 128;
     if (down(1)) mask |= 64;
+    if (down(8)) mask |= 32;
+    if (down(9)) mask |= 16;
     if (down(12) || pad.axes[1] < -0.5) mask |= 8;
     if (down(13) || pad.axes[1] > 0.5) mask |= 4;
     if (down(14) || pad.axes[0] < -0.5) mask |= 2;
@@ -82,6 +110,7 @@ function pause() {
   $("pause").textContent = paused ? "Продолжить" : "Пауза";
   keys.clear();
   touches.clear();
+  pendingMask = 0;
   accumulator = 0;
   last = performance.now();
 }
@@ -202,12 +231,19 @@ function drawArt() {
 }
 function draw() {
   if (!player || !terrain || !sprites) return;
-  if (view === "controls") drawControls();
+  if (view === "game" && game) drawGardenGame(context, canvas, game, sprites, terrain);
+  else if (view === "controls") drawControls();
   else if (view === "world") drawWorld();
   else drawArt();
   $("directions").textContent =
-    `${player.state.hullDirection} / ${player.state.turretDirection}`;
+    view === "game" && game ? `${game.actors[1].heading & 7} / ${game.actors[0].heading & 7}`
+    : `${player.state.hullDirection} / ${player.state.turretDirection}`;
   $("events").textContent = `${cannonCount} / ${machineCount}`;
+  if (game) $("game-state").textContent = `Энергия ${game.state.deadFlag ? 0 : game.actors[0].counter2}/32 · Очки ${game.state.score}`;
+  if (view === "game" && game) $("view-caption").textContent =
+    (game.state.mode & 63) === 2 ? "МАСТЕРСКАЯ · СНАРЯЖЕНИЕ И ЗАПАСЫ"
+    : (game.state.mode & 63) === 1 ? "ПРИВАЛ · ENTER ДЛЯ ПРОДОЛЖЕНИЯ"
+    : "НОВОЕ ПУТЕШЕСТВИЕ · ИГРОВОЙ РЕЖИМ";
 }
 function setView(value) {
   view = value;
@@ -218,7 +254,8 @@ function setView(value) {
     );
   $("map-options").hidden = value !== "world";
   $("view-caption").textContent =
-    value === "controls"
+    value === "game" ? "НОВОЕ ПУТЕШЕСТВИЕ · ИГРОВОЙ РЕЖИМ"
+    : value === "controls"
       ? "КОНТРОЛЛЕР НА СВОБОДНОЙ ПОВЕРХНОСТИ"
       : value === "world"
         ? "ГЕОМЕТРИЯ И КОЛЛИЗИИ · ПРОСМОТР ДАННЫХ"
@@ -244,6 +281,7 @@ $("pause").onclick = pause;
 $("reset").onclick = () => {
   reset();
   draw();
+  canvas.focus();
 };
 $("music").onclick = async () => {
   try {
@@ -262,6 +300,7 @@ window.addEventListener("keydown", (event) => {
   if (mapping[event.code]) {
     event.preventDefault();
     keys.set(event.code, mapping[event.code]);
+    pendingMask |= mapping[event.code];
   }
   if (event.code === "Space" && !event.repeat) {
     event.preventDefault();
@@ -272,11 +311,13 @@ window.addEventListener("keyup", (event) => keys.delete(event.code));
 window.addEventListener("blur", () => {
   keys.clear();
   touches.clear();
+  pendingMask = 0;
 });
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
     keys.clear();
     touches.clear();
+    pendingMask = 0;
     if (!paused) pause();
     music.stop();
     $("music").setAttribute("aria-pressed", "false");
@@ -287,6 +328,7 @@ document.querySelectorAll("[data-mask]").forEach((button) => {
     event.preventDefault();
     button.setPointerCapture(event.pointerId);
     touches.set(event.pointerId, Number(button.dataset.mask));
+    pendingMask |= Number(button.dataset.mask);
     button.classList.add("pressed");
   };
   const release = (event) => {
@@ -303,8 +345,18 @@ function update() {
   accumulator += Math.min(100, Math.max(0, now - last));
   last = now;
   while (accumulator >= 1000 / 60.0988138974405) {
-    if (!paused && player && view === "controls") {
-      player.step(inputMask());
+    if (!paused && player && (view === "controls" || view === "game")) {
+      try {
+        const mask = inputMask() | pendingMask;
+        pendingMask = 0;
+        if (view === "game") game.step(mask);
+        else player.step(mask);
+      } catch (error) {
+        paused = true;
+        $("view-caption").textContent = "ОШИБКА ИГРОВОГО СОСТОЯНИЯ";
+        $("game-message").textContent = error.message;
+        console.error(error);
+      }
       if (flash) flash--;
       step++;
     }
@@ -313,20 +365,22 @@ function update() {
   setTimeout(update, 8);
 }
 function render() {
-  if (view === "controls" && !paused) draw();
+  if ((view === "controls" || view === "game") && !paused) draw();
   requestAnimationFrame(render);
 }
 try {
-  [data, sprites, terrain] = await Promise.all([
+  [data, sprites, terrain, gameData] = await Promise.all([
     fetch("./data/world.json").then((response) => response.json()),
     loadImage("./assets/toy-actors.webp"),
     loadImage("./assets/garden-terrain.webp"),
+    loadGameData(),
   ]);
   world = new WorldMap(data);
   reset();
   draw();
   update();
   requestAnimationFrame(render);
+  canvas.focus();
 } catch (error) {
   $("view-caption").textContent = "ОШИБКА ЗАГРУЗКИ: " + error.message;
 }

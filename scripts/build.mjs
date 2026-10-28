@@ -20,5 +20,5 @@ for (const file of ["index.html", "styles.css", "src", "data", "assets"])
     recursive: true,
   });
 console.log(
-  "Built standalone native subsystem preview. Full game port remains incomplete.",
+  "Built standalone native gameplay and inspection views. Full campaign verification remains incomplete.",
 );

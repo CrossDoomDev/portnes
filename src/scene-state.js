@@ -9,6 +9,10 @@ export function bindSceneState(state, reservedActors = state.reservedActors) {
     deadFlag: [0, "heading"],
     healthSegments: [0, "timer"],
     statusTimer: [1, "appearance"],
+    messageId: [1, "scriptLow"],
+    messageState: [1, "scriptHigh"],
+    radioPhase: [1, "counter"],
+    radioTicks: [1, "timer"],
   };
   state.reservedActors = reservedActors;
   for (const [name, [index, field]] of Object.entries(links)) {

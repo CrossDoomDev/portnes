@@ -503,3 +503,5 @@ footer {
     padding-top: 18px;
   }
 }
+
+.game-message { padding: 0 20px 16px; margin: 0; color: #48684f; font-size: 13px; line-height: 1.6; min-height: 34px; }
