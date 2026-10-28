@@ -120,7 +120,7 @@ test("actor scheduler retains original order and culls the same slots", () => {
     UnportedActorError,
   );
 });
-test("all extracted spawn graphs resolve and no unported handler is silently claimed complete", () => {
+test("all extracted spawn graphs resolve and the verified native registry covers every original handler entry", () => {
   const spawns = read("../data/spawns.json");
   assert.equal(spawns.pages.length, 512);
   assert.equal(spawns.unresolved.length, 0);
@@ -137,7 +137,7 @@ test("all extracted spawn graphs resolve and no unported handler is silently cla
   assert.equal(
     coverage.handlers.filter((h) => h.entry !== "d0c6" && !h.implemented)
       .length,
-    16,
+    0,
   );
   const implemented = Object.keys(
     createActorHandlers({}, {}, [], {}).handlers,
@@ -150,4 +150,5 @@ test("all extracted spawn graphs resolve and no unported handler is silently cla
     implemented,
   );
   assert.equal(coverage.implemented, implemented.length);
+  assert.equal(coverage.campaignIntegrationComplete, false);
 });

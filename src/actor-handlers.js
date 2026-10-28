@@ -4,6 +4,8 @@ import { createActorEffects, createProjectileUpdate } from "./actor-effects.js";
 import { createActorWeapons } from "./actor-weapons.js";
 import { sampleRelativeToActor } from "./actor-aiming.js";
 import { createMovementHandlers } from "./actor-movement-handlers.js";
+import { createBossHandlers } from "./actor-bosses.js";
+import { bindSceneState } from "./scene-state.js";
 
 /** DB29 is an existence scan, not a damage check. */
 export function hasActiveActors(actors, sourceSlot, armoredOnly = false) {
@@ -26,7 +28,12 @@ export function createActorHandlers(
   operations = {},
   turretData = null,
   emplacementData = null,
+  bossData = null,
 ) {
+  bindSceneState(
+    state,
+    actors.length >= 32 ? actors.slice(30, 32) : state.reservedActors,
+  );
   const requireOperation = (name) => {
     if (typeof operations[name] !== "function")
       throw Error(`Unported actor dependency: ${name}`);
@@ -495,5 +502,31 @@ export function createActorHandlers(
     operations,
   );
   Object.assign(handlers, movement.handlers);
-  return { handlers, effects, locomotion: movement.motion };
+  const bosses = createBossHandlers(
+    data,
+    actors,
+    state,
+    operations,
+    bossData,
+    effects,
+    weapons,
+    {
+      fire,
+      relative,
+      cooldown,
+      cacheCounter,
+      followLinked,
+      downwardShot,
+      splitShot,
+      hasActiveActors: (slot) => hasActiveActors(actors, slot),
+    },
+    handlers,
+  );
+  Object.assign(handlers, bosses.handlers);
+  return {
+    handlers,
+    effects,
+    locomotion: movement.motion,
+    scene: bosses.scene,
+  };
 }

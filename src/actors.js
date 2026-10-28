@@ -8,7 +8,7 @@ export function motionDelta(data, speedMode, heading, phase) {
   const signed = (n) => (n < 8 ? n : n - 16);
   return { dy: signed(packed >> 4), dx: signed(packed & 15) };
 }
-const fields = [
+export const ACTOR_FIELDS = [
   ["xLow", "xHigh", "y", "appearance", "counter", "style", "flags", "heading"],
   [
     "rangeThreshold",
@@ -31,6 +31,7 @@ const fields = [
     "spawnMarker",
   ],
 ];
+const fields = ACTOR_FIELDS;
 export function actorFromColumns(columns) {
   const actor = {};
   fields.forEach((names, g) =>
@@ -100,6 +101,8 @@ export function updateActors(
   dispatch,
   handlers,
   updateScript,
+  onFrameCounterChange,
+  beforeHandler,
 ) {
   for (let slot = 0; slot < 30; slot++) {
     const actor = actors[slot];
@@ -114,6 +117,11 @@ export function updateActors(
     const entry = dispatch[actor.kind],
       handler = handlers[entry];
     if (!handler) throw new UnportedActorError(actor.kind, entry);
-    handler(actor, slot, frameCounter);
+    beforeHandler?.(actor, slot);
+    const result = handler(actor, slot, frameCounter);
+    if (Number.isInteger(result?.frameCounter)) {
+      frameCounter = result.frameCounter & 255;
+      onFrameCounterChange?.(frameCounter);
+    }
   }
 }

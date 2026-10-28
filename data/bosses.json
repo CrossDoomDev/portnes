@@ -1,0 +1,271 @@
+{
+  "schema": 1,
+  "poseByDirection": [2, 2, 2, 2, 2, 3, 3, 4, 4, 4, 5, 5, 6, 6, 6, 6],
+  "muzzleOffsets": [
+    [
+      {
+        "dx": 4,
+        "dy": 4
+      },
+      {
+        "dx": 5,
+        "dy": 5
+      }
+    ],
+    [
+      {
+        "dx": 6,
+        "dy": 6
+      },
+      {
+        "dx": 6,
+        "dy": 6
+      }
+    ],
+    [
+      {
+        "dx": 16,
+        "dy": -20
+      },
+      {
+        "dx": 16,
+        "dy": -12
+      }
+    ],
+    [
+      {
+        "dx": 17,
+        "dy": -6
+      },
+      {
+        "dx": 13,
+        "dy": 0
+      }
+    ],
+    [
+      {
+        "dx": -4,
+        "dy": 0
+      },
+      {
+        "dx": 4,
+        "dy": 0
+      }
+    ],
+    [
+      {
+        "dx": -13,
+        "dy": -6
+      },
+      {
+        "dx": -7,
+        "dy": 0
+      }
+    ],
+    [
+      {
+        "dx": -16,
+        "dy": -20
+      },
+      {
+        "dx": -16,
+        "dy": -12
+      }
+    ]
+  ],
+  "flightDirection": [8, 7, 6, 6, 6, 6, 6, 7, 8, 9, 10, 10, 10, 10, 10, 9],
+  "pursuitDirection": [9, 6, 6, 5, 5, 5, 6, 6, 7, 10, 10, 11, 11, 11, 10, 10],
+  "dartSteering": [
+    {
+      "heading": 2,
+      "speed": 6
+    },
+    {
+      "heading": 2,
+      "speed": 5
+    },
+    {
+      "heading": 2,
+      "speed": 4
+    },
+    {
+      "heading": 2,
+      "speed": 5
+    },
+    {
+      "heading": 6,
+      "speed": 4
+    },
+    {
+      "heading": 6,
+      "speed": 4
+    },
+    {
+      "heading": 6,
+      "speed": 5
+    },
+    {
+      "heading": 6,
+      "speed": 6
+    }
+  ],
+  "waveSteps": [
+    {
+      "duration": 32,
+      "heading": 6
+    },
+    {
+      "duration": 96,
+      "heading": 6
+    },
+    {
+      "duration": 64,
+      "heading": 2
+    },
+    {
+      "duration": 64,
+      "heading": 2
+    },
+    {
+      "duration": 96,
+      "heading": 2
+    },
+    {
+      "duration": 48,
+      "heading": 6
+    },
+    {
+      "duration": 96,
+      "heading": 6
+    },
+    {
+      "duration": 48,
+      "heading": 2
+    }
+  ],
+  "layouts": [
+    [
+      {
+        "x": 111,
+        "y": 96,
+        "prototype": 144
+      },
+      {
+        "x": 80,
+        "y": 8,
+        "prototype": 141
+      },
+      {
+        "x": 152,
+        "y": 8,
+        "prototype": 141
+      },
+      {
+        "x": 80,
+        "y": 93,
+        "prototype": 140
+      },
+      {
+        "x": 152,
+        "y": 93,
+        "prototype": 140
+      }
+    ],
+    [
+      {
+        "x": 103,
+        "y": 95,
+        "prototype": 145
+      },
+      {
+        "x": 119,
+        "y": 95,
+        "prototype": 146
+      },
+      {
+        "x": 79,
+        "y": 8,
+        "prototype": 141
+      },
+      {
+        "x": 151,
+        "y": 8,
+        "prototype": 141
+      },
+      {
+        "x": 95,
+        "y": 79,
+        "prototype": 142
+      },
+      {
+        "x": 135,
+        "y": 79,
+        "prototype": 142
+      },
+      {
+        "x": 79,
+        "y": 92,
+        "prototype": 140
+      },
+      {
+        "x": 151,
+        "y": 92,
+        "prototype": 140
+      }
+    ],
+    [
+      {
+        "x": 112,
+        "y": 87,
+        "prototype": 147
+      },
+      {
+        "x": 96,
+        "y": 16,
+        "prototype": 143
+      },
+      {
+        "x": 136,
+        "y": 16,
+        "prototype": 141
+      },
+      {
+        "x": 96,
+        "y": 70,
+        "prototype": 140
+      },
+      {
+        "x": 136,
+        "y": 70,
+        "prototype": 140
+      }
+    ],
+    [
+      {
+        "x": 144,
+        "y": 144,
+        "prototype": 136
+      },
+      {
+        "x": 96,
+        "y": 144,
+        "prototype": 113
+      },
+      {
+        "x": 112,
+        "y": 144,
+        "prototype": 114
+      },
+      {
+        "x": 128,
+        "y": 144,
+        "prototype": 115
+      },
+      {
+        "x": 144,
+        "y": 144,
+        "prototype": 116
+      }
+    ]
+  ]
+}

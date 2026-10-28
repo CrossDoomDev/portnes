@@ -1,3 +1,5 @@
+Later checkpoint: [boss-evidence.md](boss-evidence.md) completes the remaining 16 dispatch entrypoint translations. The full game/campaign is still unfinished. The figures below describe the movement checkpoint.
+
 # Native enemy steering and cached terrain
 
 This checkpoint adds ordinary JavaScript movement state machines, emplacement/special-projectile handlers and a semantic terrain cache. It contains no cartridge or emulation runtime. Original procedures were executed only by separate development tools to produce differential fixtures. Native tests need no original program.

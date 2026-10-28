@@ -1,6 +1,6 @@
 # Initial extraction report (historical)
 
-This report describes the first extraction checkpoint. Current native coverage is **48 of 64 handlers**, with **16 remaining**. Spawn assembly, aiming, enemy weapons, projectile updates, damage and additional script fixtures are documented in [combat-evidence.md](combat-evidence.md). Enemy locomotion and cached terrain are covered by [movement-evidence.md](movement-evidence.md). The original research tools named below are kept outside the release tree.
+This report describes the first extraction checkpoint. Current native coverage is **64 of 64 handlers**, with **zero untranslated dispatch entrypoints; campaign integration remains incomplete**. Spawn assembly, aiming, enemy weapons, projectile updates, damage and additional script fixtures are documented in [combat-evidence.md](combat-evidence.md). Enemy locomotion and cached terrain are covered by [movement-evidence.md](movement-evidence.md). The original research tools named below are kept outside the release tree.
 
 # Exact native extraction and bounded gameplay port
 

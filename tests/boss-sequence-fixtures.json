@@ -1,0 +1,39 @@
+{
+  "scenarios": [
+    {
+      "index": 0,
+      "frames": 768,
+      "randomCalls": 0,
+      "mapEvents": [],
+      "sha256": "1d28107c30b4269862b50a719cb3af5de241bc8bea0f282c6e7d56530ddf8564"
+    },
+    {
+      "index": 1,
+      "frames": 768,
+      "randomCalls": 0,
+      "mapEvents": [],
+      "sha256": "ca8a3eb1b66726baf5792bcdfae839db79684716d3689e53a49f492047e2cad9"
+    },
+    {
+      "index": 2,
+      "frames": 768,
+      "randomCalls": 0,
+      "mapEvents": [],
+      "sha256": "c41eb412775790fa630a68e35c90bffc78c84d8e7bd4e149715f79f5076fa279"
+    },
+    {
+      "index": 3,
+      "frames": 768,
+      "randomCalls": 0,
+      "mapEvents": [],
+      "sha256": "ccc505101571c99a54f9cef1d04b3ea6a99814e3454bfd3e7621ce9adef09854"
+    },
+    {
+      "index": 4,
+      "frames": 8,
+      "randomCalls": 0,
+      "mapEvents": [],
+      "sha256": "90dca1e2d9b82f76dc918b5d91bad05a62ebea98e677a87b277a3d47d8e79632"
+    }
+  ]
+}

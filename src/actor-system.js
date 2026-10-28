@@ -15,6 +15,7 @@ export class NativeActorSystem {
     aiming,
     turrets,
     emplacements,
+    bosses,
     scores,
     dispatch,
     state = {},
@@ -40,7 +41,7 @@ export class NativeActorSystem {
       actor.y = 255;
       return actor;
     });
-    const { handlers, effects } = createActorHandlers(
+    const { handlers, effects, scene } = createActorHandlers(
       data,
       aiming,
       this.actors,
@@ -48,8 +49,10 @@ export class NativeActorSystem {
       operations,
       turrets,
       emplacements,
+      bosses,
     );
     this.handlers = handlers;
+    this.scene = scene;
     this.effects = effects;
     this.weapons = createActorWeapons(this.actors, effects, aiming, this.state);
     this.spawns = createSpawnSystem(spawns, data, this.actors, operations);
@@ -80,12 +83,19 @@ export class NativeActorSystem {
   }
   update(frameCounter) {
     this.frameCounter = frameCounter & 255;
+    this.state.frameCounter = this.frameCounter;
     updateActors(
       this.actors,
       this.frameCounter,
       this.dispatch,
       this.handlers,
       this.runScript,
+      (value) => {
+        this.frameCounter = this.state.frameCounter = value;
+      },
+      () => {
+        this.state.conversionSearchOffset = 76;
+      },
     );
   }
   findCollision(sourceSlot, startSlot, count) {
