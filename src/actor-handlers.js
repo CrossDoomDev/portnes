@@ -3,6 +3,7 @@ import { relativeToActor } from "./actor-aiming.js";
 import { createActorEffects, createProjectileUpdate } from "./actor-effects.js";
 import { createActorWeapons } from "./actor-weapons.js";
 import { sampleRelativeToActor } from "./actor-aiming.js";
+import { createMovementHandlers } from "./actor-movement-handlers.js";
 
 /** DB29 is an existence scan, not a damage check. */
 export function hasActiveActors(actors, sourceSlot, armoredOnly = false) {
@@ -24,6 +25,7 @@ export function createActorHandlers(
   state,
   operations = {},
   turretData = null,
+  emplacementData = null,
 ) {
   const requireOperation = (name) => {
     if (typeof operations[name] !== "function")
@@ -120,6 +122,51 @@ export function createActorHandlers(
     burstTick(actor, slot, frame);
     if (!actor.pendingKind)
       actor.pendingKind = turretSetting(actor, "recovery");
+  }
+  function emplacementSetting(key, index) {
+    const value = emplacementData?.[key]?.[index];
+    if (!Number.isInteger(value))
+      throw Error(`Unported emplacement configuration: ${key}/${index}`);
+    return value;
+  }
+  function fixedBurst(actor, slot, frame) {
+    actor.turnTarget = byte(actor.turnTarget - 1);
+    if (actor.turnTarget >= 192 || actor.turnTarget & 15) return;
+    const heading = actor.heading;
+    actor.heading = (heading >> 1) + 3;
+    const spawned = fire(actor, slot, frame);
+    actor.heading = heading;
+    if (spawned >= 0) {
+      actor.timer = 15;
+      actors[spawned].y = byte(actors[spawned].y - 16);
+    }
+  }
+  function downwardShot(actor, slot, frame) {
+    if (actor.timer || frame >= 192 || (((actor.kind & 4) << 2) ^ frame) & 31)
+      return;
+    const spawned = fire(actor, slot, frame);
+    if (spawned >= 0) {
+      actor.timer = 15;
+      actors[spawned].heading = 4;
+    }
+  }
+  function splitShot(actor, slot, frame) {
+    const spawned = fire(actor, slot, frame);
+    if (spawned < 0) return;
+    actor.timer = 15;
+    const projectile = actor.projectileKind,
+      heading = actor.heading;
+    actors[spawned].rangeThreshold = emplacementSetting(
+      "splitShotRange",
+      relative(actor, frame).directionFine,
+    );
+    actor.projectileKind = 63;
+    actor.heading = 3;
+    fire(actor, slot, frame);
+    actor.heading = 5;
+    fire(actor, slot, frame);
+    actor.heading = heading;
+    actor.projectileKind = projectile;
   }
   const handlers = {
     d0c6() {},
@@ -307,6 +354,146 @@ export function createActorHandlers(
       handlers.d1b9(actor, slot, frame);
       cacheCounter(actor, slot);
     },
+    d7df(actor, slot, frame) {
+      contact(actor, slot);
+      if (!byte(actor.contactFlags << 1)) {
+        effects.destroy(slot);
+        return;
+      }
+      const link = actor.link;
+      actor.link = 0;
+      handlers.d170(actor, slot, frame);
+      actor.link = link;
+    },
+    d802(actor, slot, frame) {
+      if (cooldown(actor)) return;
+      contact(actor, slot);
+      if (!byte(actor.contactFlags << 1)) {
+        effects.destroy(slot);
+        return;
+      }
+      const value = emplacementSetting(
+        "contactTurret",
+        (samplePlayer(actor, frame).steering & 15) >> 1,
+      );
+      actor.heading = (value >> 1) & 7;
+      if (value & 128) return;
+      actor.turnTarget = byte(actor.turnTarget + 1);
+      if (actor.turnTarget >= 224 || actor.turnTarget & actor.parameter2)
+        return;
+      if (fire(actor, slot, frame) >= 0) actor.timer = 15;
+    },
+    d855(actor, slot, frame) {
+      if (actor.counter) {
+        if (actor.spawnMarker !== 255) actor.spawnMarker &= 127;
+        if (!((slot * 64 + frame) & 15)) actor.style ^= 3;
+      }
+      if (cooldown(actor)) return;
+      const value = emplacementSetting(
+        "fixedTurret",
+        relative(actor, frame).directionFine,
+      );
+      actor.heading = value & 15;
+      if (!(value & 128)) fixedBurst(actor, slot, frame);
+    },
+    d8c3(actor, slot, frame) {
+      actor.heading = 2;
+      if (!cooldown(actor)) fixedBurst(actor, slot, frame);
+    },
+    df71(actor, slot) {
+      cacheCounter(actor, slot);
+      actor.heading = 4;
+      handlers.d01e(actor, slot);
+    },
+    e02b(actor, slot) {
+      cacheCounter(actor, slot);
+      if (actor.contactFlags & 3) {
+        actor.pendingKind = byte(actor.pendingKind + 1) | 128;
+        return;
+      }
+      if (actor.pendingKind & 128) {
+        actor.pendingKind = byte(actor.pendingKind + 1);
+        return;
+      }
+      actor.timer = byte(actor.timer - 1);
+      if (byte(actor.y + 120) < 136) {
+        const heading = actor.y & 128 ? 0 : 4;
+        if (heading !== actor.heading) {
+          actor.heading = heading;
+          actor.pendingKind = 192;
+        }
+      }
+      const delta = motionDelta(
+        data,
+        actor.flags & 15,
+        actor.heading,
+        actor.timer,
+      );
+      requireOperation("resolveContact")(actor, slot, delta);
+      moveActor(actor, delta.dx, delta.dy);
+    },
+    dff3(actor, slot, frame) {
+      cacheCounter(actor, slot);
+      if (linkedActor(actor).pendingKind === 224) splitShot(actor, slot, frame);
+      else turretBase(actor, slot, frame);
+    },
+    d686(actor, slot, frame) {
+      const index = byte(actor.rangeThreshold << 4) | (actor.timer >> 3);
+      actor.heading = emplacementSetting("curvedShotHeading", index);
+      handlers.eb90(actor, slot, frame);
+    },
+    d6ab(actor, slot, frame) {
+      if (actor.link) {
+        actor.link = byte(actor.link - 1);
+        return;
+      }
+      if (actor.timer) actor.timer = byte(actor.timer - 1);
+      downwardShot(actor, slot, frame);
+      for (let index = 2; index < 17; index++)
+        if (actors[index].kind === 16) return;
+      effects.destroy(slot);
+    },
+    e655(actor, slot, frame) {
+      if (!actor.counter) {
+        actor.counter = 1;
+        weapons.emit(slot, actor.projectileKind);
+        return;
+      }
+      actor.timer |= 128;
+      if (actor.scriptLow) {
+        actor.scriptLow = byte(actor.scriptLow - 1);
+        if (!(actor.scriptLow & 128) && !(actor.scriptLow & 15)) {
+          const difference =
+            (actor.heading - relative(actor, frame).directionFine) & 15;
+          const delta = difference === 0 ? 0 : difference <= 8 ? -1 : 1;
+          actor.heading = (actor.heading + delta) & 15;
+        }
+      }
+      handlers.eb90(actor, slot, frame);
+    },
+    d386(actor, slot) {
+      if (hasActiveActors(actors, slot)) return;
+      if (actor.counter) {
+        actor.counter = byte(actor.counter - 1);
+        if (actor.counter) return;
+        cue("stage-clear");
+        state.musicCommand = 128;
+      }
+      actor.timer = byte(actor.timer - 1);
+      if (actor.timer) return;
+      actor.counter2 = byte(actor.counter2 - 1);
+      if (!actor.counter2) state.mode = 12;
+    },
   };
-  return { handlers, effects };
+  const movement = createMovementHandlers(
+    data,
+    aiming,
+    actors,
+    state,
+    effects,
+    weapons,
+    operations,
+  );
+  Object.assign(handlers, movement.handlers);
+  return { handlers, effects, locomotion: movement.motion };
 }

@@ -11,7 +11,12 @@ export function sampleRelativeToActor(
   status = {},
 ) {
   if (target.y === 255)
-    return { directionFine: 0, range: 15, steering: status.inactiveSteering };
+    return {
+      directionFine: 0,
+      range: 15,
+      steering: status.inactiveSteering,
+      routing: status.inactiveRoute,
+    };
   const dx =
     ((target.xHigh << 8) | target.xLow) - ((actor.xHigh << 8) | actor.xLow);
   const column = ((dx >> 4) + 16) & 31;
@@ -28,17 +33,20 @@ export function sampleRelativeToActor(
       directionFine: cell.directionFine,
       range: 7,
       steering: cell.steering,
+      routing: cell.routing,
     };
   if (status.equipment & 16 && status.modifiers & 1 && frameCounter < 192)
     return {
       directionFine: cell.directionFine ^ 15,
       range: 7,
       steering: cell.steering,
+      routing: cell.routing,
     };
   return {
     directionFine: cell.directionFine,
     range: cell.range,
     steering: cell.steering,
+    routing: cell.routing,
   };
 }
 

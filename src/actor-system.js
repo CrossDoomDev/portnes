@@ -14,6 +14,7 @@ export class NativeActorSystem {
     spawns,
     aiming,
     turrets,
+    emplacements,
     scores,
     dispatch,
     state = {},
@@ -46,6 +47,7 @@ export class NativeActorSystem {
       this.state,
       operations,
       turrets,
+      emplacements,
     );
     this.handlers = handlers;
     this.effects = effects;

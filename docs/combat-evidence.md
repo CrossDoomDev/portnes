@@ -14,7 +14,7 @@ This checkpoint contains independent, ordinary JavaScript functions and semantic
 | `actor-collisions.js`                 | EC16, E7FE, EA5A, E861                                    | 4096 collision pool scans; 4096 simultaneous damage, shield reserve, score and high score cases                  |
 | `actor-system.js`, `actor-scripts.js` | CA44, CB0E, CC0F–CC9F                                     | Ten scenarios × 256 frames × all 30 slots, including real native projectiles                                     |
 
-The 27 handlers comprise 23 nonempty routines and four confirmed empty routines: D0C6, D16F, DF27, DF28. The remaining 37 handlers fail explicitly when dispatched. Handler counts are not a completion percentage for the game.
+The 27 handlers comprise 23 nonempty routines and four confirmed empty routines: D0C6, D16F, DF27, DF28. Current total coverage has since increased to 48 handlers, with 16 remaining; see [movement-evidence.md](movement-evidence.md). Unported handlers fail explicitly when dispatched. Handler counts are not a completion percentage for the game.
 
 The eight tested enemy weapon branches use prototypes 48, 53, 56, 58, 59, 26, 172 and 95. These exercise ordinary allocation, aimed coarse/fine headings, frame-alternating weapons, fan spreads, three-shot spreads and partially exhausted pools. A failed final allocation can leave earlier shots spawned while reporting failure; this behavior is retained.
 
@@ -38,4 +38,4 @@ Damage fixtures use ordinary targets and verified empty death/drop prototypes. P
 
 Ten script fixtures cover movement, collision removal in speed mode 14, both range-branch outcomes, fallback activation, aim/fire, jumps, resuming a nonzero timer and ending the update pass. They are controlled scenarios; they do not prove all 192 campaign script roots or a full level.
 
-Player cannon/machine-gun resource rules, full player health/fuel/lives handling, 37 remaining handlers, bosses, camera/route transitions, pickups, inventory/radio/passwords/ending and full campaign comparison remain unfinished. The browser preview remains a controller/map/art inspection surface; these combat modules are not presented as a finished playable game.
+Player cannon/machine-gun resource rules, full player health/fuel/lives handling, 16 remaining handlers, bosses, camera/route transitions, pickups, inventory/radio/passwords/ending and full campaign comparison remain unfinished. The browser preview remains a controller/map/art inspection surface; these combat modules are not presented as a finished playable game.

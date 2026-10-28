@@ -1,3 +1,5 @@
+Current cached-terrain extension: [movement-evidence.md](movement-evidence.md) records 12,288 additional original comparisons with arbitrary fine scroll positions and explicit cached metatiles. The direct-lookup report below describes the earlier checkpoint and its limits.
+
 # Decoded world and collision research
 
 Source cartridge SHA-256: `e219538626a929b5b6c570b9b2d9843afba171d3032de0bd3122f38077a71184`.

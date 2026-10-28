@@ -140,35 +140,35 @@
       ],
       "implemented": true,
       "empty": true,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "e717",
       "kinds": [1],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "e71f",
       "kinds": [2],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "eb90",
       "kinds": [3, 8],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d0c7",
       "kinds": [4, 5],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "cde5",
@@ -181,28 +181,28 @@
       "kinds": [9],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "dae4",
       "kinds": [11],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "dacb",
       "kinds": [12],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d098",
       "kinds": [13],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d415",
@@ -237,158 +237,170 @@
     {
       "entry": "d386",
       "kinds": [19],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d6ab",
       "kinds": [20],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d325",
       "kinds": [21],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "daec",
       "kinds": [22],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d3b4",
       "kinds": [23],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d686",
       "kinds": [24],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "e6bb",
       "kinds": [25],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d0f2",
       "kinds": [26],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d045",
       "kinds": [27],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d170",
       "kinds": [28],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d1b9",
       "kinds": [29],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "dff3",
       "kinds": [30],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d1a1",
       "kinds": [31],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "de88",
       "kinds": [32],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "de43",
       "kinds": [33],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "de0b",
       "kinds": [34],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d16f",
       "kinds": [35, 126],
       "implemented": true,
       "empty": true,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "dc6e",
       "kinds": [36],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "dd4e",
       "kinds": [37],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "ddac",
       "kinds": [38],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "ddd3",
       "kinds": [39],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "ddec",
       "kinds": [40],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "df27",
       "kinds": [41, 42],
       "implemented": true,
       "empty": true,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "df28",
       "kinds": [43],
       "implemented": true,
       "empty": true,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "dbe9",
@@ -399,15 +411,16 @@
     {
       "entry": "e02b",
       "kinds": [45, 46],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d01e",
       "kinds": [47],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "df29",
@@ -424,14 +437,16 @@
     {
       "entry": "d855",
       "kinds": [52],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d8c3",
       "kinds": [53],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d8de",
@@ -442,14 +457,16 @@
     {
       "entry": "de64",
       "kinds": [56],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "df71",
       "kinds": [57],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "df7c",
@@ -472,14 +489,16 @@
     {
       "entry": "d7df",
       "kinds": [62],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "db9c",
       "kinds": [63],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "daff",
@@ -496,42 +515,44 @@
     {
       "entry": "e655",
       "kinds": [66],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d339",
       "kinds": [68],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d351",
       "kinds": [69],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d36b",
       "kinds": [70],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d379",
       "kinds": [71],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "d802",
       "kinds": [96],
-      "implemented": false,
-      "empty": false
+      "implemented": true,
+      "empty": false,
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     },
     {
       "entry": "cda0",
@@ -544,12 +565,12 @@
       "kinds": [125],
       "implemented": true,
       "empty": false,
-      "verification": "Isolated original routine fixtures; campaign integration remains incomplete"
+      "verification": "Isolated original routine fixtures; see docs/movement-evidence.md and docs/combat-evidence.md for scope"
     }
   ],
   "totalDistinct": 64,
   "nonNoop": 60,
-  "implemented": 27,
-  "implementedNonNoop": 23,
-  "remaining": 37
+  "implemented": 48,
+  "implementedNonNoop": 44,
+  "remaining": 16
 }

@@ -137,7 +137,7 @@ test("all extracted spawn graphs resolve and no unported handler is silently cla
   assert.equal(
     coverage.handlers.filter((h) => h.entry !== "d0c6" && !h.implemented)
       .length,
-    37,
+    16,
   );
   const implemented = Object.keys(
     createActorHandlers({}, {}, [], {}).handlers,
