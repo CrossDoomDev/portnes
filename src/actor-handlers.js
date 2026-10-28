@@ -241,7 +241,7 @@ export function createActorHandlers(
         actor.timer,
       );
       moveActor(actor, delta.dx, delta.dy);
-      requireOperation("sampleContact")(actor, slot);
+      requireOperation("sampleContact")(actor, slot, delta);
       if (actor.contactFlags & 128 && byte(actor.contactFlags << 1))
         actor.y = 255;
     },

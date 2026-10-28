@@ -22,6 +22,7 @@ The eight tested enemy weapon branches use prototypes 48, 53, 56, 58, 59, 26, 17
 
 - A script's `switchAI` constructor ends the entire object update pass for that frame. The later slots resume on the next frame. It does not simply continue to the next actor.
 - Movement mode 14 deletes its scripted actor when low collision bits are nonzero; bit 7 alone does not satisfy that test.
+- If the third projectile of a three-shot spread cannot allocate a slot, the original still reports success and returns slot 25 (the pool end cursor), rather than the second shot. Weapon fixtures now vary available slots from zero through nine and check the returned cursor.
 - Original slot order matters: a projectile created in a later slot may update during the same pass.
 - A linked turret can increment its body's timer, copy collision flags, and update palette fields. Burst, recovery and cooldown counters retain byte wrapping.
 - A vertically overflowing relative calculation complements a byte and forces range 7. Floating-point trigonometry would change this behavior.

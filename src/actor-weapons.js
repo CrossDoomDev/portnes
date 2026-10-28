@@ -14,7 +14,9 @@ export function createActorWeapons(actors, effects, aiming, state) {
     if (second < 0) return -1;
     actors[second].heading = byte(actors[second].heading + step);
     const third = emit(slot, actor.projectileKind);
-    if (third < 0) return second;
+    // E26B sets success after failed allocation without restoring Y. The
+    // returned cursor is slot 25 (the end of this pool), not the second shot.
+    if (third < 0) return 25;
     actors[third].heading = byte(actors[third].heading - step);
     return third;
   }

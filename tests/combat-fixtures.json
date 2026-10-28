@@ -170,42 +170,42 @@
     {
       "prototype": 48,
       "cases": 384,
-      "sha256": "23eeda9cba88e1ea93618f9983a67fe728ca520355ae9b378747c4458186caf1"
+      "sha256": "0531f1eb06c7cdb18881d16a1f86ea044639734681d0c40422f53508d8772489"
     },
     {
       "prototype": 53,
       "cases": 384,
-      "sha256": "e38d57dd8a86429df43dda6a0324a5f622fa0f9000deeea453df374ea5e918ff"
+      "sha256": "4487053ceb28d74619c5f00db51471f8139f399b54908fd5bb1200ee9e71f990"
     },
     {
       "prototype": 56,
       "cases": 384,
-      "sha256": "dd580de829506cc8854845c629cbbb0dca24e3846e24e47b69b9e2f4e4085bf0"
+      "sha256": "e1d3154bcb282af335a4f61edee342bf78d2a4659d9ebfc3afdc657be220c086"
     },
     {
       "prototype": 58,
       "cases": 384,
-      "sha256": "876742cc7e7e7e65173d46ecafae10c242c6bf3a5b17b748b4f9ee61d2f9b5c2"
+      "sha256": "aeeecad9ded990bf295c6214d68037f10b122a0ab2abcb1534badf0b18fc797d"
     },
     {
       "prototype": 59,
       "cases": 384,
-      "sha256": "021f1134037903e74a5c522c49601a02bb87053f1cd77903981e09c757b9ece9"
+      "sha256": "8156cd6739220c8345868fb6a11994f5da49ee670b6f22114e314009a927868f"
     },
     {
       "prototype": 26,
       "cases": 384,
-      "sha256": "b7b3c019fbabdaff733048e80ffcf867903b181f970068e4998988c7e65fd731"
+      "sha256": "e5ed8d202d591315e2f9f4328d54ad5ff0e2c981555e8de1d92e68d95b682312"
     },
     {
       "prototype": 172,
       "cases": 384,
-      "sha256": "61c78ab009d1b56dbeb2205609ca4b1c7d8868453bba3f442bd953dcbf332c3e"
+      "sha256": "460c1c191ff17d41252f9ca5840544abe8809133ea501798c9c78456935d19c8"
     },
     {
       "prototype": 95,
       "cases": 384,
-      "sha256": "1c55c93386650a0054678e4ce017cb09ddf00641576fa0cae6679f7b44b8950e"
+      "sha256": "2fcdcfe381b44df94d6912daf34e40c8d9e15ed3df158545e7eb80bc2a6a9fcf"
     }
   ]
 }

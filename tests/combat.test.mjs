@@ -112,10 +112,13 @@ test("native actor handlers and eight weapon branches match isolated original ro
       const f = setup(n);
       f.actor.projectileKind = expected.prototype;
       f.actor.appearance = n & 1 ? 112 : 48;
+      for (let slot = 17; slot < 26; slot++)
+        f.actors[slot].y = slot - 17 < n % 10 ? 255 : 100;
       const result = f.weapons.fire(f.actor, 7, f.frame);
       output.push(
         ...f.actors.flatMap((a) => actorColumns(a).flat()),
         result >= 0 ? 1 : 0,
+        result >= 0 ? result + 1 : 0,
       );
     }
     assert.equal(hash(output), expected.sha256, `weapon ${expected.prototype}`);
