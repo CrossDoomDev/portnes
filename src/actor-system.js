@@ -5,9 +5,12 @@ import { createSpawnSystem } from "./actor-spawns.js";
 import { createScriptRunner } from "./actor-scripts.js";
 import { relativeToActor } from "./actor-aiming.js";
 import { findActorCollision, createActorCombat } from "./actor-collisions.js";
+import { createMapChanges } from "./map-changes.js";
+import { createCameraSystem } from "./camera.js";
 
 /** Native coordinator for the translated object subsystem. It is not a full
- * campaign coordinator: the caller owns camera, map mutation and pickups. */
+ * campaign coordinator: the caller owns camera progression and pickups.
+ * Supplying mapChanges + terrainCache installs native destruction edits. */
 export class NativeActorSystem {
   constructor({
     data,
@@ -16,6 +19,9 @@ export class NativeActorSystem {
     turrets,
     emplacements,
     bosses,
+    mapChanges,
+    terrainCache,
+    world,
     scores,
     dispatch,
     state = {},
@@ -34,6 +40,15 @@ export class NativeActorSystem {
       cameraLow: 0,
       ...state,
     };
+    if (mapChanges) {
+      this.changeMap = createMapChanges(
+        mapChanges,
+        terrainCache,
+        this.state,
+        operations.onMapChange,
+      );
+      operations = { ...operations, changeMap: this.changeMap };
+    }
     this.actors = Array.from({ length: 30 }, () => {
       const actor = actorFromColumns(
         Array.from({ length: 3 }, () => Array(8).fill(0)),
@@ -41,6 +56,12 @@ export class NativeActorSystem {
       actor.y = 255;
       return actor;
     });
+    if (world) {
+      if (!terrainCache) throw Error("Camera requires a live terrain cache");
+      this.camera = createCameraSystem(
+        world, terrainCache, this.actors, this.state, operations,
+      );
+    }
     const { handlers, effects, scene } = createActorHandlers(
       data,
       aiming,

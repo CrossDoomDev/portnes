@@ -1,0 +1,27 @@
+{
+  "seed": 52917,
+  "cases": 8192,
+  "sha256": "d1b158c09fe07fc74a6d43048f49d0671fc641ff5b14ae0d7b20373c0509f59b",
+  "sequences": [
+    {
+      "index": 0,
+      "frames": 4096,
+      "sha256": "8207c13212a0eaec5c1c3bfd50554fba403465edd99ddbcd921c23f92c2fc9c2"
+    },
+    {
+      "index": 1,
+      "frames": 4096,
+      "sha256": "8008e92e1587eaa614e02a8bdb1aef91a766edc27fef77049b064647069ca485"
+    },
+    {
+      "index": 2,
+      "frames": 4096,
+      "sha256": "997979ccbbac52d0a01effe86a54b259eac8d550f3b1b3fbe66cdf997d03e6ab"
+    },
+    {
+      "index": 3,
+      "frames": 4096,
+      "sha256": "07be5fa7b33eafdc18d45a2e29dfd99bc44240f61d2fa9600c8c36b9adc9172b"
+    }
+  ]
+}

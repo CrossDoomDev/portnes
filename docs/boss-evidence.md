@@ -1,6 +1,6 @@
 # Native boss and scene handler translations
 
-All 64 distinct original actor dispatch entrypoints now have native JavaScript translations (60 nonempty routines and four empty ones). **This does not complete the game port.** Camera traversal, map mutation, player weapon resources, items/menus/radio and full campaign coordination remain unfinished.
+All 64 distinct original actor dispatch entrypoints now have native JavaScript translations (60 nonempty routines and four empty ones). **This does not complete the game port.** Player weapon resources, items/menus/radio and full campaign coordination remain unfinished. Native map edits and the common camera pass were added in the subsequent [map/camera checkpoint](map-camera-evidence.md).
 
 The new code uses semantic objects, decoded tables and normal functions. It does not load a cartridge, emulate a console, interpret instructions or render original graphics. The separate development oracle executed original procedures only to record expected results; those tools and the original program are outside this branch.
 
@@ -35,8 +35,10 @@ The new fixtures cover 19,968 isolated helper/handler cases and 3080 combined fr
 
 ## Limits of verification
 
-The isolated cases supply contact flags, map-change notifications, deterministic random bytes and HUD/audio callbacks. Map events are checked for order and IDs; the map-change implementation itself is still unfinished. Display/HUD refreshes and console interrupt behavior are excluded from the isolated oracle, because the target uses a new renderer/audio system.
+The isolated cases supply contact flags, map-change notifications, deterministic random bytes and HUD/audio callbacks. Map events are checked for order and IDs; the implementation was added later and is verified separately in [map-camera-evidence.md](map-camera-evidence.md). Display/HUD refreshes and console interrupt behavior are excluded from the isolated oracle, because the target uses a new renderer/audio system.
 
 The combined boss scenes use native cached-terrain collision sampling and actual decoded layout records, with a stationary player and controlled initial boss states. HUD refreshes and map mutation remain isolated; RNG bytes are deliberately controlled on both sides. These scenes are not full stage playthroughs, and they do not prove the original campaign's RNG stream or all reachable states.
 
-The handler registry is complete at the level of translated entrypoints. Full frame ordering outside the actor pass, scrolling/frontier events, dynamic map editing, equipment/resource rules, pickups, radio/inventory/passwords, lives/fuel, ending and full campaign comparison are still required before calling this a completed port.
+The handler registry is complete at the level of translated entrypoints. Full frame ordering outside the actor pass, scrolling/frontier event integration, equipment/resource rules, pickups, radio/inventory/passwords, lives/fuel, ending and full campaign comparison are still required before calling this a completed port.
+
+Later checkpoint: native terrain mutation and the common camera pass are now implemented separately; full campaign integration remains unfinished. See [map-camera-evidence.md](map-camera-evidence.md).
