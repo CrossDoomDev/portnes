@@ -32,6 +32,7 @@ let view = "game",
   data,
   sprites,
   terrain,
+  machines,
   player,
   game,
   gameData,
@@ -54,12 +55,15 @@ function reset() {
   $("pause").textContent = "Пауза";
   keys.clear(); touches.clear(); pendingMask = 0;
   if (gameData) game = new NativeGame(gameData, {
+    startAtTitle: true,
     onEvent(event) {
       if (event.type === "shot") {
         const cannon = event.value.kind !== "machineGun";
         if (cannon) cannonCount++; else machineCount++;
         music.pop(cannon);
       } else if (event.type === "sound" && event.value < 32) music.setTheme(event.value);
+      else if (event.type === "sound") music.effect(event.value);
+      else if (event.type === "damage") music.effect(47);
       else if (event.type === "message" || event.type === "radio") {
         $("game-message").textContent = event.type === "radio"
           ? `Получен сигнал ${event.value}. Откройте мастерскую: Tab → «Связь».`
@@ -231,7 +235,7 @@ function drawArt() {
 }
 function draw() {
   if (!player || !terrain || !sprites) return;
-  if (view === "game" && game) drawGardenGame(context, canvas, game, sprites, terrain);
+  if (view === "game" && game) drawGardenGame(context, canvas, game, sprites, terrain, machines);
   else if (view === "controls") drawControls();
   else if (view === "world") drawWorld();
   else drawArt();
@@ -239,9 +243,17 @@ function draw() {
     view === "game" && game ? `${game.actors[1].heading & 7} / ${game.actors[0].heading & 7}`
     : `${player.state.hullDirection} / ${player.state.turretDirection}`;
   $("events").textContent = `${cannonCount} / ${machineCount}`;
-  if (game) $("game-state").textContent = `Энергия ${game.state.deadFlag ? 0 : game.actors[0].counter2}/32 · Очки ${game.state.score}`;
+  if (game) $("game-state").textContent = `Энергия ${game.state.deadFlag ? 0 : game.actors[0].counter2}/32 · Очки ${game.state.score} · Попытки ${game.state.lives + 1}`;
+  $("password-form").hidden = !(view === "game" && game?.presentation.kind === "password");
   if (view === "game" && game) $("view-caption").textContent =
-    (game.state.mode & 63) === 2 ? "МАСТЕРСКАЯ · СНАРЯЖЕНИЕ И ЗАПАСЫ"
+    game.radio ? "НА СВЯЗИ · СООБЩЕНИЯ МАРШРУТА"
+    : (game.state.mode & 63) === 4 ? "БОЛЬШОЕ ПУТЕШЕСТВИЕ · ГЛАВНОЕ МЕНЮ"
+    : (game.state.mode & 63) === 16 ? "ПУТЕШЕСТВИЕ НАЧИНАЕТСЯ"
+    : (game.state.mode & 63) === 20 ? "ПРОДОЛЖИТЬ ПО ПАРОЛЮ"
+    : (game.state.mode & 63) === 7 ? "ВОЗВРАЩЕНИЕ НА МАРШРУТ"
+    : (game.state.mode & 63) === 12 ? "ФИНАЛ ПУТЕШЕСТВИЯ"
+    : (game.state.mode & 63) === 8 ? "ИСТОРИЯ ПУТЕШЕСТВИЯ"
+    : (game.state.mode & 63) === 2 ? "МАСТЕРСКАЯ · СНАРЯЖЕНИЕ И ЗАПАСЫ"
     : (game.state.mode & 63) === 1 ? "ПРИВАЛ · ENTER ДЛЯ ПРОДОЛЖЕНИЯ"
     : "НОВОЕ ПУТЕШЕСТВИЕ · ИГРОВОЙ РЕЖИМ";
 }
@@ -278,6 +290,15 @@ $("next-page").onclick = () => {
   draw();
 };
 $("pause").onclick = pause;
+$("password-form").onsubmit = event => {
+  event.preventDefault();
+  if ((game.state.mode & 63) !== 20) return;
+  const text = $("password-input").value.trim();
+  if (game.presentation.submitPassword(text)) {
+    keys.clear(); pendingMask = 0; $("password-input").value = ""; canvas.focus();
+  }
+  draw();
+};
 $("reset").onclick = () => {
   reset();
   draw();
@@ -369,11 +390,12 @@ function render() {
   requestAnimationFrame(render);
 }
 try {
-  [data, sprites, terrain, gameData] = await Promise.all([
+  [data, sprites, terrain, gameData, machines] = await Promise.all([
     fetch("./data/world.json").then((response) => response.json()),
     loadImage("./assets/toy-actors.webp"),
     loadImage("./assets/garden-terrain.webp"),
     loadGameData(),
+    loadImage("./assets/garden-machines.webp"),
   ]);
   world = new WorldMap(data);
   reset();

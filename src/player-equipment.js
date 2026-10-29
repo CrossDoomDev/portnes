@@ -54,7 +54,8 @@ export function createPlayerEquipment(data, actors, state, operations = {}) {
     const saved = state.messageId;
     state.messageId = id;
     state.messageState = 255;
-    operations.onMessage?.(id);
+    const suspended = operations.onMessage?.(id, () => { state.messageId = saved; });
+    if (suspended?.suspend) return suspended;
     state.messageId = saved;
   }
   function pickup(sourceSlot, targetSlot) {
@@ -74,13 +75,13 @@ export function createPlayerEquipment(data, actors, state, operations = {}) {
     const index = cursor + 3, slot = index >> 3, field = index & 7;
     if (!actors[slot]) throw Error("Pickup cursor exceeds scene records");
     if (actors[slot][ACTOR_FIELDS[1][field]] === 5)
-      message(byte(actors[slot][ACTOR_FIELDS[2][field]] + 47));
+      return message(byte(actors[slot][ACTOR_FIELDS[2][field]] + 47));
   }
   function equipment(sourceSlot, targetSlot) {
     const target = actors[targetSlot];
     target.projectileKind = target.dropId;
     target.dropId = 127;
-    message(byte(target.projectileKind + 47));
+    return message(byte(target.projectileKind + 47));
   }
   return { active, toggle, clear, consume, consumeShot, pickup, equipment, get, set };
 }

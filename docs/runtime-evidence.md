@@ -1,8 +1,8 @@
 # Native game loop, player arsenal and campaign events
 
-The browser now has an actual playable **Играть** mode. `NativeGame` connects controls, player weapons, terrain, all actor handlers, collision/damage, row spawning, camera traversal, inventory stocks, page routes, radio notifications and scene changes. The old controller-only view remains a separate inspection tab.
+The browser now has an actual playable **Играть** mode. `NativeGame` connects controls, player weapons, terrain, all actor handlers, collision/damage, row spawning, camera traversal, inventory stocks, page routes, radio dialogues and scene changes. The old controller-only view remains a separate inspection tab.
 
-This checkpoint implements the requested common gameplay systems. It does **not** certify a complete one-to-one port of every screen or a full campaign playthrough.
+This checkpoint implements the requested common gameplay systems. It does **not** certify a full campaign playthrough or exhaustive equivalence of presentation timing. Menus, intro, passwords, radio and endings are now implemented; see [presentation-evidence.md](presentation-evidence.md).
 
 ## Original procedure comparisons
 
@@ -16,7 +16,7 @@ This checkpoint implements the requested common gameplay systems. It does **not*
 | Scene transitions, full terrain reload and arena creation | E8BF and actual F212/E9F2/F772 within the common frame | 4 continuous sequences × 128 frames, 12 additional actual RNG calls |
 | Checkpoint return and cache/layout restoration | C81F and actual reset, camera and environment procedures | 128 checkpoint resumes |
 
-The twelve continuous sequences total **10,496 frames** and **352 actual RNG calls**. The original reference retains its state across consecutive frames; it is not reset from the native state at each tick. Compared state includes every field of 32 actor/scene records, all 480 live terrain cells, 63 logical component records, page/camera coordinates, random seed, frame counter, controls, stocks, score/high score and named music signals.
+The first twelve continuous sequences total **10,496 frames** and **352 actual RNG calls**. An additional 128 campaign-position sequences reproduce **97,200 frames** with mixed directions and both weapons, for **107,696 active-game frames** across 140 scenarios. The latter scenarios stop on defeat; they do not form a full campaign playthrough. The original reference retains its state across consecutive frames; it is not reset from the native state at each tick. Compared state includes every field of 32 actor/scene records, all 480 live terrain cells, 63 logical component records, page/camera coordinates, random seed, frame counter, controls, stocks, score/high score and named music signals.
 
 The isolated arsenal/transition tests deliberately replace modal presentation with semantic notifications. The combined scene tests execute the original map edits, full row reload and boss allocation together, excluding only console graphics-transfer waits, old palette flashes, sound synthesis and fade presentation. Their absence is intentional: HTML5 uses its own renderer and audio. The fixtures do not establish equivalence of hardware wait durations or original audio-busy timing.
 
@@ -52,10 +52,9 @@ The original display pass changes actor offscreen flags. Its old component state
 
 ## Remaining boundaries
 
-- The original title/intro, password entry, continue/game-over menus and complete ending presentation are not implemented by this checkpoint. The new browser UI starts in an initialized playable state and displays a completion state when the translated campaign handler requests it.
-- Radio IDs, triggers, countdown and inventory access are connected; complete original radio dialogue/page navigation is not yet ported. The current UI shows signal/message notifications.
-- Modal fade durations and the original audio engine's busy flags are presentation boundaries; new music/effects use Web Audio and their own composition.
-- Full-route and full-campaign traversal, every stock combination and all exceptional shared scratch-value dependencies still need broader comparison. The active-frame tests include selected ordinary/modifier/breakdown states, not an exhaustive proof of all reachable states.
-- The actor registry remains `campaignIntegrationComplete: false` until full traversal and remaining campaign screens are verified. This is distinct from the common gameplay coordinator now being implemented.
+- Menus, passwords, intro, defeat/continue, radio dialogues, story and credits are implemented; detailed comparisons and limits are in [presentation-evidence.md](presentation-evidence.md).
+- Modal fade durations, console graphics-transfer costs and original audio-busy timing are presentation boundaries; new music/effects use Web Audio and their own composition.
+- Full-route and full-campaign traversal, every stock combination and all exceptional shared scratch-value dependencies still need broader comparison. Tests cover selected reachable sequences and many isolated states, not every reachable state.
+- The actor registry remains `campaignIntegrationComplete: false` until full traversal and timing boundaries are verified.
 
-The full native suite contains **51 tests**. It runs without a cartridge or emulator. Research tools remain outside the native branch. Build output contains only HTML, CSS, JavaScript, ordinary JSON gameplay data and new image assets.
+The full native suite contains **63 tests**. It runs without a cartridge or emulator. Research tools remain outside the native branch. Build output contains only HTML, CSS, JavaScript, ordinary JSON gameplay data and new image assets.

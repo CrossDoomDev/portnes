@@ -8,6 +8,8 @@ import { createPlayerController } from "./player-controller.js";
 import { createCampaign } from "./campaign.js";
 import { createLayoutState } from "./layout-state.js";
 import { createGameRandom } from "./game-random.js";
+import { GamePresentation } from "./presentation.js";
+import { findActorCollision } from "./actor-collisions.js";
 
 const emptyActor = () => actorFromColumns(Array.from({ length: 3 }, () => Array(8).fill(0)));
 
@@ -16,6 +18,7 @@ const emptyActor = () => actorFromColumns(Array.from({ length: 3 }, () => Array(
  */
 export class NativeGame {
   constructor(config, options = {}) {
+    if (config.combatGeometry?.schema !== 1) throw Error("Missing combat geometry profiles");
     this.config = config;
     this.events = [];
     this.world = new WorldMap(config.world);
@@ -48,6 +51,8 @@ export class NativeGame {
       pickup: (...args) => this.equipment.pickup(...args),
       equipment: (...args) => this.equipment.equipment(...args),
       transition: (...args) => this.campaign.transition(...args),
+      onScore: () => { this.combatGeometry = config.combatGeometry.afterScore; },
+      onDestructionTerrain: () => { this.combatGeometry = config.data.hitboxes; },
       onMapChange: value => emit("map", value),
       onStatusChange: (actor, slot) => emit("status", slot),
       onInitialize: (slot, prototype) => this.actorSignal(prototype),
@@ -65,7 +70,9 @@ export class NativeGame {
     this.state = this.system.state;
     this.actors = this.system.actors;
     this.equipment = createPlayerEquipment(config.equipment, this.actors, this.state, {
-      onSound: id => this.sound(id), onMessage: id => emit("message", id),
+      onSound: id => this.sound(id), onMessage: (id, restore) => {
+        emit("message", id); this.openRadio("field", restore); return { suspend: true };
+      },
     });
     this.weapons = createPlayerWeapons(this.actors, this.system.effects, this.state, this.equipment, {
       onPlayerShot: (kind, slot) => emit("shot", { kind, slot }),
@@ -82,6 +89,7 @@ export class NativeGame {
     this.layout = createLayoutState(config.layout, this.actors, this.state);
     this.random = createGameRandom(config.randomContexts, this.actors, this.state);
     this.emit = emit;
+    this.presentation = config.presentation ? new GamePresentation(this, config.presentation) : null;
     if (options.actors) this.actors.splice(0, 30, ...options.actors.slice(0, 30));
     else this.resetActors();
     if (options.cells) this.cache.cells.set(options.cells);
@@ -90,6 +98,10 @@ export class NativeGame {
       this.campaign.refreshEnvironment();
       this.campaign.sync();
       this.layout.update(this.state.frameCounter);
+    }
+    if (options.startAtTitle) {
+      this.state.mode = 4;
+      this.presentation.enter(4);
     }
   }
   sound(id) {
@@ -135,7 +147,8 @@ export class NativeGame {
     if (!checkpoint) throw Error(`Unknown campaign checkpoint ${id}`);
     for (const actor of [...this.actors, ...s.reservedActors]) {
       for (const field of ACTOR_FIELDS[0]) actor[field] = 255;
-      actor.xHigh = 0; actor.rangeThreshold = 0;
+      actor.xHigh = 0;
+      for (const field of ACTOR_FIELDS[1]) actor[field] = 0;
     }
     s.modifiers = s.patience = 0; s.equipment &= 224;
     if (s.reserveEnergy) s.reserveEnergy = 32;
@@ -162,12 +175,47 @@ export class NativeGame {
     s.mode = 0; s.playerScreenX = 116; s.playerScreenEdge = 117;
     this.emit("checkpoint", s.worldPage & 511);
   }
-  combatPass() {
-    let target = this.system.findCollision(0, 2, 24);
-    if (target >= 0) { this.system.combat.damagePair(0, target); this.updateHealth(); }
+  *combatPass() {
+    this.combatGeometry = this.config.data.hitboxes;
+    const collision = (slot, count) => findActorCollision({ hitboxes: this.combatGeometry }, this.actors, slot, 2, count, this.state);
+    let target = collision(0, 24);
+    if (target >= 0) {
+      const pending = this.system.combat.damagePair(0, target);
+      if (pending?.resume) { yield; pending.resume(); }
+      this.updateHealth();
+    }
+    this.combatGeometry = this.config.data.hitboxes;
     for (let slot = 26; slot < 30; slot++) {
-      target = this.system.findCollision(slot, 2, 15);
-      if (target >= 0) this.system.combat.damagePair(slot, target);
+      target = collision(slot, 15);
+      if (target >= 0) {
+        const pending = this.system.combat.damagePair(slot, target);
+        if (pending?.resume) { yield; pending.resume(); }
+      }
+    }
+  }
+  openRadio(source, restore) {
+    const fields = ACTOR_FIELDS[2].slice(0, 6), record = this.state.reservedActors[1];
+    const messages = [];
+    for (const field of fields) {
+      if (messages.length && record[field] === 255) break;
+      const id = record[field];
+      if (!this.config.presentation?.messages[id]) throw Error(`Unknown radio message ${id}`);
+      messages.push(id);
+    }
+    if (!messages.length) throw Error("Empty radio queue");
+    this.radio = { source, restore, messages, index: 0, mode: this.state.mode };
+    if (source === "field") { this.state.mode = 1; this.sound(128); }
+  }
+  radioStep(mask) {
+    const input = this.player.controls.sample(mask), radio = this.radio;
+    if (input.triggered & 192) radio.index = (radio.index + 1) % radio.messages.length;
+    else if (input.triggered & 48) {
+      for (const field of ACTOR_FIELDS[2].slice(0, 6)) this.state.reservedActors[1][field] = 255;
+      this.state.mode = radio.mode;
+      this.state.cameraHigh &= 127;
+      if (radio.source === "field") this.sound(128);
+      else this.state.statusTimer = 51;
+      radio.restore?.(); this.radio = null;
     }
   }
   blastPass() {
@@ -179,10 +227,15 @@ export class NativeGame {
     this.state.blastState = byte(value - 1);
   }
   menuStep(mask, phase) {
+    if (this.menuPhase !== phase) {
+      this.menuPhase = phase; this.sound(128);
+      if (phase === 2) { this.state.inventoryIndex = 0; this.state.modifiers &= 251; }
+      else this.sound(60);
+    }
     const input = this.player.controls.sample(mask);
     this.layout.update(this.state.frameCounter);
     if (phase === 1) {
-      if (input.triggered & 16) { this.state.mode &= 128; this.campaign.sync(); }
+      if (input.triggered & 16) { this.sound(60); this.sound(128); this.state.mode &= 128; this.campaign.sync(); }
       return;
     }
     if (phase === 2) {
@@ -191,8 +244,8 @@ export class NativeGame {
       if (!(this.state.frameCounter & 63) && (this.state.modifiers & 4)) {
         this.state.modifiers &= 251;
         if (this.state.statusTimer !== 51) {
-          this.state.statusTimer = 51;
           this.emit("message", this.state.messageId);
+          this.openRadio("inventory");
           input.triggered = 0; input.target = 255;
         }
       }
@@ -201,27 +254,51 @@ export class NativeGame {
         this.state.inventoryIndex = (this.state.inventoryIndex + delta + 7) % 7;
         this.sound(59);
       }
-      if (input.triggered & 32) { this.state.mode = 0; this.campaign.sync(); }
+      if (input.triggered & 32) {
+        this.state.cameraHigh &= 127;
+        this.sound(128); this.sound(60); this.state.mode = 0; this.campaign.sync();
+      }
     }
   }
   step(mask = 0) {
     this.events.length = 0;
     const s = this.state;
     s.frameCounter = byte(s.frameCounter - 1);
-    const phase = s.mode & 63;
-    if (phase) {
-      if (phase === 7) this.resumeCheckpoint();
-      else if (phase <= 3) this.menuStep(mask, phase === 3 ? 1 : phase);
-      else this.emit(phase === 12 ? "ending" : "phase", phase);
+    if (this.radio) {
+      this.radioStep(mask);
+      if (!this.radio && this.pendingFrame) this.continueFrame();
       return this.events;
     }
+    const phase = s.mode & 63;
+    if (this.presentation?.pendingMode !== undefined) {
+      this.presentation.step(mask, this.presentation.mode);
+      return this.events;
+    }
+    if (phase) {
+      if (phase === 6) { this.resumeCheckpoint(); if (this.presentation) this.presentation.mode = null; }
+      else if (phase <= 3) this.menuStep(mask, phase === 3 ? 1 : phase);
+      else if (this.presentation) this.presentation.step(mask, phase);
+      else throw Error(`Missing presentation data for game phase ${phase}`);
+      return this.events;
+    }
+    if (this.presentation) this.presentation.mode = null;
+    this.menuPhase = null;
+    this.pendingFrame = this.playFrame(mask);
+    this.continueFrame();
+    return this.events;
+  }
+  continueFrame() {
+    if (this.pendingFrame.next().done) this.pendingFrame = null;
+  }
+  *playFrame(mask) {
+    const s = this.state;
     if (this.actors[0].kind === 31) this.player.step(mask);
     const scroll = this.system.camera.advance(s.scrollX, s.scrollY);
     s.scrollY = byte(scroll.dy);
     s.inactiveRoute = this.layout.parts[32].y;
     this.system.update(s.frameCounter);
     this.layout.update(s.frameCounter);
-    if (s.frameCounter & 1) { this.combatPass(); this.campaign.sync(); }
+    if (s.frameCounter & 1) { yield* this.combatPass(); this.campaign.sync(); }
     this.system.spawns.spawnRow(s.worldPage, s.cameraFineY, s.scrollY);
     s.scrollX = s.scrollY = 0;
     this.campaign.updateRadio(s.frameCounter);
@@ -234,6 +311,5 @@ export class NativeGame {
       }
       if (this.actors[0].y === 255 && s.frameCounter === 0) s.mode = 7;
     }
-    return this.events;
   }
 }

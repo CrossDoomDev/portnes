@@ -29,6 +29,7 @@ export function createActorEffects(data, actors, operations = {}) {
       if (typeof operations.changeMap !== "function")
         throw Error("Unported destruction dependency: changeMap");
       operations.changeMap(actor.spawnMarker, actor, slot);
+      operations.onDestructionTerrain?.();
     }
     spawnFromActor(slot, 16, 12, actor.deathEffect);
     initialize(slot, actor.dropId);

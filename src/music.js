@@ -104,6 +104,7 @@ export class GardenMusic {
     oscillator.connect(gain).connect(this.context.destination);
     oscillator.start(time);
     oscillator.stop(time + duration + 0.01);
+    oscillator.onended = () => { oscillator.disconnect(); gain.disconnect(); };
   }
   schedule() {
     if (!this.enabled) return;
@@ -140,5 +141,17 @@ export class GardenMusic {
       "sine",
     );
     if (mainCannon) this.tone(79, now + 0.035, 0.09, 0.07, "triangle");
+  }
+  effect(id) {
+    if (!this.enabled || !this.context || id < 32 || id >= 128) return;
+    const now = this.context.currentTime;
+    if (id === 65) {
+      [79, 84, 88].forEach((note, i) => this.tone(note, now + i * 0.09, 0.12, 0.045, "triangle"));
+    } else if (id === 60) {
+      this.tone(76, now, 0.12, 0.04); this.tone(83, now + 0.07, 0.18, 0.035);
+    } else if (id === 59) this.tone(86, now, 0.045, 0.035, "triangle");
+    else if ([27, 29, 47].includes(id)) {
+      [60, 55, 48].forEach((note, i) => this.tone(note, now + i * 0.035, 0.13, 0.065, "triangle"));
+    } else this.tone(68 + id % 15, now, 0.08, 0.028, "triangle");
   }
 }

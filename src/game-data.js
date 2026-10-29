@@ -3,6 +3,8 @@ export const GAME_DATA = Object.freeze({
   emplacements: "emplacements", bosses: "bosses", mapChanges: "map-changes",
   scores: "scores", world: "world", equipment: "player-equipment",
   campaign: "campaign", layout: "layout-state", randomContexts: "random-contexts",
+  presentation: "presentation",
+  combatGeometry: "combat-geometry",
 });
 export async function loadGameData() {
   const values = await Promise.all(Object.entries(GAME_DATA).map(async ([key, file]) => {

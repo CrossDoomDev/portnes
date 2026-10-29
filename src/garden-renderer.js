@@ -1,9 +1,11 @@
 const INVENTORY = ["Тройной залп", "Мощность", "Осколки", "Дальность", "Импульс", "Резерв", "Связь"];
+import { drawPresentation, drawRadio } from "./presentation-renderer.js";
 
 /** New HTML5 presentation. Gameplay never samples pixels or this canvas. */
-export function drawGardenGame(context, canvas, game, sprites, terrain) {
+export function drawGardenGame(context, canvas, game, sprites, terrain, machines) {
   if (canvas.width !== 1024 || canvas.height !== 960) { canvas.width = 1024; canvas.height = 960; }
   canvas.className = "";
+  if (drawPresentation(context, game, sprites, machines)) return;
   const s = game.state, scale = 4, cameraX = ((s.cameraHigh & 1) << 8) | s.cameraLow;
   const definitions = game.world.collisions.get(`${s.tileset}:${s.materialPolicy}`);
   const sw = terrain.width / 3, sh = terrain.height / 2;
@@ -19,16 +21,17 @@ export function drawGardenGame(context, canvas, game, sprites, terrain) {
         x * scale, y * scale, 16 * scale + 1, 16 * scale + 1);
     }
   }
-  const actorSprite = (index, x, y, angle = 0, size = 30) => {
-    const w = sprites.width / 4, h = sprites.height / 2;
+  const actorSprite = (index, x, y, angle = 0, size = 30, image = sprites) => {
+    const w = image.width / 4, h = image.height / 2;
     context.save();context.translate(x * scale, y * scale);context.rotate(angle);
-    context.drawImage(sprites, index % 4 * w, Math.floor(index / 4) * h, w, h,
+    context.drawImage(image, index % 4 * w, Math.floor(index / 4) * h, w, h,
       -size * scale / 2, -size * scale / 2, size * scale, size * scale);
     context.restore();
   };
-  for (let slot = 2; slot < 30; slot++) {
+  const intro = (s.mode & 63) === 16;
+  for (let slot = intro ? 0 : 2; slot < 30; slot++) {
     const a = game.actors[slot], x = s.mode & 128 ? a.xLow : (((a.xHigh << 8) | a.xLow) - cameraX) & 511;
-    if (a.y >= 232 || x >= 256) continue;
+    if (a.y >= 240 || x >= 256 || a.appearance >= 254) continue;
     if ([3, 8, 9].includes(a.kind)) {
       context.fillStyle = slot >= 26 ? "#fff4a1" : "#fa78aa";
       context.strokeStyle = "#fffdf5";context.lineWidth = 3;
@@ -36,10 +39,16 @@ export function drawGardenGame(context, canvas, game, sprites, terrain) {
       context.fill();context.stroke();
     } else if (a.kind === 1 || a.kind === 2) actorSprite(7, x + 12, a.y + 12, a.timer / 10, 32);
     else if (a.kind === 4 || a.kind === 5 || a.kind === 27) actorSprite(6, x + 12, a.y + 12, 0, 25);
-    else actorSprite(a.flags & 8 ? 3 : a.kind >= 48 ? 4 : 2, x + 12, a.y + 12, (a.heading & 7) * Math.PI / 4, a.kind < 20 ? 46 : 30);
+    else if (machines && (a.kind < 26 || a.kind >= 50 && a.kind <= 63)) {
+      const family = a.kind < 14 ? 4 : a.kind < 20 ? 2 : a.kind < 26 ? 6 : a.kind < 54 ? 0 : a.kind < 57 ? 7 : 3;
+      const hitbox = game.config.data.hitboxes[a.hitbox & 15];
+      const size = Math.max(24, Math.min(80, Math.max(hitbox[1] - hitbox[0], hitbox[3] - hitbox[2]) + 8));
+      actorSprite(family, x + 12, a.y + 12, (a.heading & 7) * Math.PI / 4, size, machines);
+    } else actorSprite(intro ? (a.appearance >= 232 ? 4 : 0) : a.flags & 8 ? 3 : a.kind >= 48 ? 4 : 2,
+      x + 12, a.y + 12, (a.heading & 7) * Math.PI / 4, 30);
   }
   const player = game.actors[0], hull = game.actors[1];
-  if (player.y < 232) {
+  if (!intro && player.y < 240) {
     const x = s.mode & 128 ? player.xLow : (player.xLow - s.cameraLow) & 255;
     actorSprite(0, x + 12, player.y + 12, (hull.heading & 7) * Math.PI / 4);
     actorSprite(1, x + 12, player.y + 12, (player.heading & 7) * Math.PI / 4);
@@ -53,7 +62,7 @@ export function drawGardenGame(context, canvas, game, sprites, terrain) {
   context.fillStyle = "#315647";context.textAlign = "right";
   context.fillText(`ОЧКИ ${s.score.toString().padStart(6, "0")}`, 956, 77);
   const phase = s.mode & 63;
-  if (phase) {
+  if (phase && phase !== 16 && !game.radio) {
     context.fillStyle = "#21483bc9";context.fillRect(0, 0, 1024, 960);
     context.fillStyle = "#fff9e9";context.textAlign = "center";context.font = "bold 42px Arial";
     context.fillText(phase === 2 ? "Мастерская" : phase === 12 ? "Маршрут завершён!" : phase === 7 ? "Возвращаемся на маршрут…" : "Привал", 512, phase === 2 ? 220 : 440);
@@ -68,4 +77,10 @@ export function drawGardenGame(context, canvas, game, sprites, terrain) {
       context.font = "22px Arial";context.fillText("← → выбор · X включить · Tab вернуться", 512, 740);
     } else { context.font = "25px Arial";context.fillText(phase === 12 ? "Новое путешествие — кнопка «Начать заново»" : "Enter — продолжить", 512, 500); }
   }
+  if (intro) {
+    context.fillStyle = "#fff9ebed";context.fillRect(190, 853, 644, 59);
+    context.fillStyle = "#315647";context.font = "25px Arial";context.textAlign = "center";
+    context.fillText("Путешествие начинается…", 512, 891);
+  }
+  drawRadio(context, game);
 }

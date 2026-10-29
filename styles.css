@@ -505,3 +505,6 @@ footer {
 }
 
 .game-message { padding: 0 20px 16px; margin: 0; color: #48684f; font-size: 13px; line-height: 1.6; min-height: 34px; }
+#password-form:not([hidden]) { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 8px 20px 24px; }
+#password-form label { flex-basis: 100%; color: #315647; font-weight: 700; }
+#password-input { flex: 1; min-width: 130px; max-width: 250px; border: 1px solid #b5cbb5; border-radius: 12px; background: #fffdf4; padding: 12px 16px; font: 20px monospace; letter-spacing: 4px; color: #315647; }

@@ -592,5 +592,10 @@
   "campaignIntegrationComplete": false,
   "commonGameLoopImplemented": true,
   "playerWeaponsImplemented": true,
-  "pageEventsImplemented": true
+  "pageEventsImplemented": true,
+  "menusImplemented": true,
+  "introImplemented": true,
+  "passwordsImplemented": true,
+  "radioDialogsImplemented": true,
+  "endingImplemented": true
 }

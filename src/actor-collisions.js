@@ -57,14 +57,21 @@ export function createActorCombat(
     if (special) {
       if (typeof operations[special] !== "function")
         throw Error(`Unported combat dependency: ${special}`);
-      if (operations[special](sourceSlot, targetSlot) === false) return;
+      const result = operations[special](sourceSlot, targetSlot);
+      if (result === false) return;
+      if (result?.suspend) return { resume: () => damage(sourceSlot, targetSlot) };
     }
+    damage(sourceSlot, targetSlot);
+  }
+  function damage(sourceSlot, targetSlot) {
+    const source = actors[sourceSlot], target = actors[targetSlot];
     const targetDifference = target.counter2 - source.counter2;
     const sourceDifference = source.counter2 - target.counter2;
     source.counter2 = byte(sourceDifference);
     target.counter2 = byte(targetDifference);
     survival(sourceSlot, sourceDifference);
     if (targetDifference <= 0) {
+      operations.onScore?.();
       state.score =
         (state.score + scores.byHitboxClass[target.hitbox >> 4]) & 0xffffff;
       if (state.score >= state.highScore) state.highScore = state.score;

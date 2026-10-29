@@ -34,6 +34,9 @@ test("game pause and inventory freeze actors while polling controls; selected up
  assert.equal(g.state.resources[0], 4);
  assert.equal(g.state.reserveEnergy, 0);
  assert.ok(g.events.some(e => e.type === "shot"));
+ g.state.inventoryIndex = 6; g.state.modifiers |= 4;
+ g.step(0); g.step(32); g.step(0);
+ assert.equal(g.state.inventoryIndex, 0); assert.equal(g.state.modifiers & 4, 0);
 });
 test("four scene-transition sequences match 512 continuous original frames, including arena layout allocation and map replacement", () => {
  for (const fixture of readGameFixture("./game-transition-fixtures.json").scenarios) {
@@ -49,7 +52,7 @@ test("checkpoint lookup, reset, live terrain reload and layout match 128 origina
  const fixture = readGameFixture("./checkpoint-fixtures.json"), hash = createHash("sha256");
  for (let n = 0; n < fixture.cases; n++) {
   const g = new NativeGame(config, { state: { worldPage: n * 17 & 511, frameCounter: n } });
-  g.state.mode = 7;
+  g.state.mode = 6;
   g.state.resources = [n % 41, (n + 1) % 41, (n + 2) % 41, (n + 3) % 41, n % 25];
   g.state.reserveEnergy = n % 33; g.state.modifiers = n & 255;
   g.step(0); hash.update(Uint8Array.from(gameOutput(g)));
@@ -59,7 +62,7 @@ test("checkpoint lookup, reset, live terrain reload and layout match 128 origina
 test("checkpoint resume restores the checkpoint world and preserves collected stock", () => {
  const g = new NativeGame(config);
  g.state.resources = [3, 4, 5, 6, 7]; g.state.modifiers = 255;
- g.state.reserveEnergy = 8; g.state.mode = 7;
+ g.state.reserveEnergy = 8; g.state.mode = 6;
  g.step(0);
  assert.equal(g.state.mode, 0);
  assert.equal(g.state.modifiers, 0);

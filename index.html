@@ -28,8 +28,8 @@
       </section>
       <div class="notice">
         <strong>Игровой режим уже доступен.</strong> Подключены стрельба, враги,
-        столкновения, запасы, прокрутка и события маршрута. Проверка полного
-        прохождения и оставшихся экранов ещё продолжается.
+        столкновения, запасы, прокрутка, меню, пароли и радио. Проверка полного
+        прохождения всех маршрутов ещё продолжается.
       </div>
       <nav class="tabs" aria-label="Режим проверки">
         <button data-view="game" class="selected">Играть</button
@@ -55,6 +55,11 @@
             ><button id="music" aria-pressed="false">♫ Новая музыка</button>
           </div>
           <p id="game-message" class="game-message" aria-live="polite"></p>
+          <form id="password-form" hidden>
+            <label for="password-input">Пароль маршрута</label>
+            <input id="password-input" inputmode="numeric" pattern="[0-9]{7}" maxlength="7" minlength="7" required placeholder="Семь цифр" autocomplete="off" />
+            <button type="submit">Продолжить</button>
+          </form>
         </section>
         <aside>
           <p class="eyebrow">ЧТО УЖЕ ПЕРЕНЕСЕНО</p>
@@ -121,7 +126,7 @@
           <div class="coverage">
             <strong>Проверено на оригинале</strong>
             <p>
-              10 496 совместных кадров<br />512 страниц карт<br />64 обработчика объектов<br />51 нативный тест
+              107 696 игровых кадров<br />886 кадров вступления<br />64 обработчика объектов<br />63 нативных теста
             </p>
             <a href="./docs/STATUS.md">Подробный статус переноса ↗</a>
           </div>
