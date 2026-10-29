@@ -32,7 +32,7 @@ jobs:
       - name: Use workflow-based Pages publishing
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh api --method PATCH repos/${{ github.repository }}/pages -f build_type=workflow
+        run: gh api --method PUT repos/${{ github.repository }}/pages -f build_type=workflow
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
