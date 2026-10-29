@@ -1,4 +1,4 @@
-name: Check browser adaptation
+name: Native subsystem conformance
 on: [push, pull_request]
 jobs:
   test:
@@ -9,4 +9,5 @@ jobs:
         with:
           node-version: 22
       - run: npm test
+      - run: npm run audit
       - run: npm run build

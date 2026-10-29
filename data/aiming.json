@@ -1,0 +1,3110 @@
+{
+  "schema": 1,
+  "cellSize": 16,
+  "grid": [
+    [
+      {
+        "directionFine": 12,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 11,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 10,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 7,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 6,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 5,
+        "steering": 204,
+        "routing": 4
+      },
+      {
+        "directionFine": 11,
+        "range": 4,
+        "steering": 204,
+        "routing": 4
+      },
+      {
+        "directionFine": 11,
+        "range": 3,
+        "steering": 204,
+        "routing": 19
+      },
+      {
+        "directionFine": 11,
+        "range": 2,
+        "steering": 204,
+        "routing": 19
+      },
+      {
+        "directionFine": 10,
+        "range": 1,
+        "steering": 170,
+        "routing": 19
+      },
+      {
+        "directionFine": 9,
+        "range": 1,
+        "steering": 170,
+        "routing": 115
+      },
+      {
+        "directionFine": 8,
+        "range": 1,
+        "steering": 136,
+        "routing": 81
+      },
+      {
+        "directionFine": 6,
+        "range": 1,
+        "steering": 102,
+        "routing": 87
+      },
+      {
+        "directionFine": 5,
+        "range": 2,
+        "steering": 68,
+        "routing": 87
+      },
+      {
+        "directionFine": 5,
+        "range": 3,
+        "steering": 68,
+        "routing": 87
+      },
+      {
+        "directionFine": 5,
+        "range": 4,
+        "steering": 68,
+        "routing": 64
+      },
+      {
+        "directionFine": 4,
+        "range": 5,
+        "steering": 68,
+        "routing": 64
+      },
+      {
+        "directionFine": 4,
+        "range": 6,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 7,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 10,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 11,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      }
+    ],
+    [
+      {
+        "directionFine": 12,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 11,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 10,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 7,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 6,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 5,
+        "steering": 204,
+        "routing": 4
+      },
+      {
+        "directionFine": 11,
+        "range": 5,
+        "steering": 204,
+        "routing": 4
+      },
+      {
+        "directionFine": 11,
+        "range": 3,
+        "steering": 170,
+        "routing": 19
+      },
+      {
+        "directionFine": 10,
+        "range": 3,
+        "steering": 170,
+        "routing": 19
+      },
+      {
+        "directionFine": 9,
+        "range": 2,
+        "steering": 170,
+        "routing": 115
+      },
+      {
+        "directionFine": 8,
+        "range": 2,
+        "steering": 136,
+        "routing": 113
+      },
+      {
+        "directionFine": 8,
+        "range": 2,
+        "steering": 136,
+        "routing": 113
+      },
+      {
+        "directionFine": 7,
+        "range": 2,
+        "steering": 102,
+        "routing": 81
+      },
+      {
+        "directionFine": 6,
+        "range": 3,
+        "steering": 102,
+        "routing": 119
+      },
+      {
+        "directionFine": 5,
+        "range": 3,
+        "steering": 102,
+        "routing": 87
+      },
+      {
+        "directionFine": 5,
+        "range": 5,
+        "steering": 68,
+        "routing": 64
+      },
+      {
+        "directionFine": 5,
+        "range": 5,
+        "steering": 68,
+        "routing": 64
+      },
+      {
+        "directionFine": 5,
+        "range": 6,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 7,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 10,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 11,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      }
+    ],
+    [
+      {
+        "directionFine": 11,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 11,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 10,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 7,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 6,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 6,
+        "steering": 170,
+        "routing": 116
+      },
+      {
+        "directionFine": 10,
+        "range": 5,
+        "steering": 170,
+        "routing": 116
+      },
+      {
+        "directionFine": 10,
+        "range": 4,
+        "steering": 170,
+        "routing": 115
+      },
+      {
+        "directionFine": 9,
+        "range": 3,
+        "steering": 170,
+        "routing": 115
+      },
+      {
+        "directionFine": 9,
+        "range": 3,
+        "steering": 170,
+        "routing": 113
+      },
+      {
+        "directionFine": 8,
+        "range": 3,
+        "steering": 136,
+        "routing": 113
+      },
+      {
+        "directionFine": 8,
+        "range": 3,
+        "steering": 136,
+        "routing": 113
+      },
+      {
+        "directionFine": 7,
+        "range": 3,
+        "steering": 136,
+        "routing": 113
+      },
+      {
+        "directionFine": 7,
+        "range": 3,
+        "steering": 102,
+        "routing": 81
+      },
+      {
+        "directionFine": 6,
+        "range": 4,
+        "steering": 102,
+        "routing": 81
+      },
+      {
+        "directionFine": 5,
+        "range": 5,
+        "steering": 102,
+        "routing": 65
+      },
+      {
+        "directionFine": 5,
+        "range": 6,
+        "steering": 102,
+        "routing": 65
+      },
+      {
+        "directionFine": 5,
+        "range": 6,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 7,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 10,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 11,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      }
+    ],
+    [
+      {
+        "directionFine": 11,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 11,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 10,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 10,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 7,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 7,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 6,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 6,
+        "steering": 170,
+        "routing": 115
+      },
+      {
+        "directionFine": 9,
+        "range": 5,
+        "steering": 170,
+        "routing": 115
+      },
+      {
+        "directionFine": 9,
+        "range": 5,
+        "steering": 170,
+        "routing": 115
+      },
+      {
+        "directionFine": 9,
+        "range": 4,
+        "steering": 136,
+        "routing": 113
+      },
+      {
+        "directionFine": 8,
+        "range": 4,
+        "steering": 136,
+        "routing": 113
+      },
+      {
+        "directionFine": 8,
+        "range": 4,
+        "steering": 136,
+        "routing": 113
+      },
+      {
+        "directionFine": 7,
+        "range": 4,
+        "steering": 136,
+        "routing": 113
+      },
+      {
+        "directionFine": 7,
+        "range": 5,
+        "steering": 102,
+        "routing": 81
+      },
+      {
+        "directionFine": 6,
+        "range": 5,
+        "steering": 102,
+        "routing": 81
+      },
+      {
+        "directionFine": 6,
+        "range": 6,
+        "steering": 102,
+        "routing": 81
+      },
+      {
+        "directionFine": 6,
+        "range": 6,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 7,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 7,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 10,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 11,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      }
+    ],
+    [
+      {
+        "directionFine": 11,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 11,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 11,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 10,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 8,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 8,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 8,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 7,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 7,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 6,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 9,
+        "range": 6,
+        "steering": 170,
+        "routing": 115
+      },
+      {
+        "directionFine": 9,
+        "range": 5,
+        "steering": 170,
+        "routing": 99
+      },
+      {
+        "directionFine": 9,
+        "range": 5,
+        "steering": 136,
+        "routing": 98
+      },
+      {
+        "directionFine": 8,
+        "range": 5,
+        "steering": 136,
+        "routing": 98
+      },
+      {
+        "directionFine": 8,
+        "range": 5,
+        "steering": 136,
+        "routing": 98
+      },
+      {
+        "directionFine": 7,
+        "range": 5,
+        "steering": 136,
+        "routing": 98
+      },
+      {
+        "directionFine": 7,
+        "range": 5,
+        "steering": 136,
+        "routing": 82
+      },
+      {
+        "directionFine": 7,
+        "range": 6,
+        "steering": 102,
+        "routing": 81
+      },
+      {
+        "directionFine": 6,
+        "range": 6,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 7,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 7,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 8,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 8,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 10,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 10,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 11,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      }
+    ],
+    [
+      {
+        "directionFine": 11,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 11,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 11,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 10,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 9,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 8,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 8,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 8,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 8,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 7,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 7,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 9,
+        "range": 6,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 9,
+        "range": 6,
+        "steering": 136,
+        "routing": 99
+      },
+      {
+        "directionFine": 8,
+        "range": 6,
+        "steering": 136,
+        "routing": 98
+      },
+      {
+        "directionFine": 8,
+        "range": 6,
+        "steering": 136,
+        "routing": 98
+      },
+      {
+        "directionFine": 8,
+        "range": 6,
+        "steering": 136,
+        "routing": 98
+      },
+      {
+        "directionFine": 8,
+        "range": 6,
+        "steering": 136,
+        "routing": 98
+      },
+      {
+        "directionFine": 7,
+        "range": 6,
+        "steering": 136,
+        "routing": 82
+      },
+      {
+        "directionFine": 7,
+        "range": 6,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 7,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 7,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 8,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 8,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 8,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 8,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 9,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 10,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 10,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 11,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      }
+    ],
+    [
+      {
+        "directionFine": 11,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 12,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 11,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 10,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 10,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 9,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 8,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 8,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 8,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 8,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 9,
+        "range": 7,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 9,
+        "range": 7,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 9,
+        "range": 7,
+        "steering": 136,
+        "routing": 255
+      },
+      {
+        "directionFine": 8,
+        "range": 7,
+        "steering": 136,
+        "routing": 255
+      },
+      {
+        "directionFine": 8,
+        "range": 7,
+        "steering": 136,
+        "routing": 255
+      },
+      {
+        "directionFine": 8,
+        "range": 7,
+        "steering": 136,
+        "routing": 255
+      },
+      {
+        "directionFine": 8,
+        "range": 7,
+        "steering": 136,
+        "routing": 255
+      },
+      {
+        "directionFine": 7,
+        "range": 7,
+        "steering": 136,
+        "routing": 255
+      },
+      {
+        "directionFine": 7,
+        "range": 7,
+        "steering": 136,
+        "routing": 255
+      },
+      {
+        "directionFine": 7,
+        "range": 7,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 8,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 8,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 8,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 8,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 8,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 9,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 10,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 11,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 11,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      }
+    ],
+    [
+      {
+        "directionFine": 11,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 12,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 11,
+        "range": 12,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 11,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 10,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 10,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 10,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 9,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 8,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 10,
+        "range": 8,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 9,
+        "range": 8,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 9,
+        "range": 8,
+        "steering": 170,
+        "routing": 255
+      },
+      {
+        "directionFine": 9,
+        "range": 8,
+        "steering": 136,
+        "routing": 255
+      },
+      {
+        "directionFine": 9,
+        "range": 8,
+        "steering": 136,
+        "routing": 255
+      },
+      {
+        "directionFine": 8,
+        "range": 8,
+        "steering": 136,
+        "routing": 255
+      },
+      {
+        "directionFine": 8,
+        "range": 8,
+        "steering": 136,
+        "routing": 255
+      },
+      {
+        "directionFine": 8,
+        "range": 8,
+        "steering": 136,
+        "routing": 255
+      },
+      {
+        "directionFine": 8,
+        "range": 8,
+        "steering": 136,
+        "routing": 255
+      },
+      {
+        "directionFine": 7,
+        "range": 8,
+        "steering": 136,
+        "routing": 255
+      },
+      {
+        "directionFine": 7,
+        "range": 8,
+        "steering": 136,
+        "routing": 255
+      },
+      {
+        "directionFine": 7,
+        "range": 8,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 7,
+        "range": 8,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 8,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 8,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 8,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 9,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 10,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 10,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 6,
+        "range": 11,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 12,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 12,
+        "steering": 102,
+        "routing": 255
+      },
+      {
+        "directionFine": 5,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      }
+    ],
+    [
+      {
+        "directionFine": 13,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 12,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 12,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 11,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 11,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 10,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 14,
+        "range": 10,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 14,
+        "range": 9,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 14,
+        "range": 8,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 14,
+        "range": 8,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 14,
+        "range": 8,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 15,
+        "range": 7,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 15,
+        "range": 7,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 15,
+        "range": 6,
+        "steering": 0,
+        "routing": 255
+      },
+      {
+        "directionFine": 0,
+        "range": 6,
+        "steering": 0,
+        "routing": 255
+      },
+      {
+        "directionFine": 0,
+        "range": 6,
+        "steering": 0,
+        "routing": 255
+      },
+      {
+        "directionFine": 0,
+        "range": 6,
+        "steering": 0,
+        "routing": 255
+      },
+      {
+        "directionFine": 0,
+        "range": 6,
+        "steering": 0,
+        "routing": 255
+      },
+      {
+        "directionFine": 1,
+        "range": 6,
+        "steering": 0,
+        "routing": 255
+      },
+      {
+        "directionFine": 1,
+        "range": 7,
+        "steering": 0,
+        "routing": 255
+      },
+      {
+        "directionFine": 1,
+        "range": 7,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 1,
+        "range": 8,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 2,
+        "range": 8,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 2,
+        "range": 8,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 2,
+        "range": 8,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 2,
+        "range": 9,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 2,
+        "range": 10,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 11,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 11,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 12,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 12,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      }
+    ],
+    [
+      {
+        "directionFine": 13,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 11,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 10,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 10,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 9,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 14,
+        "range": 8,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 14,
+        "range": 8,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 14,
+        "range": 8,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 14,
+        "range": 7,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 15,
+        "range": 6,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 15,
+        "range": 6,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 15,
+        "range": 6,
+        "steering": 0,
+        "routing": 255
+      },
+      {
+        "directionFine": 0,
+        "range": 5,
+        "steering": 0,
+        "routing": 255
+      },
+      {
+        "directionFine": 0,
+        "range": 5,
+        "steering": 0,
+        "routing": 255
+      },
+      {
+        "directionFine": 0,
+        "range": 5,
+        "steering": 0,
+        "routing": 255
+      },
+      {
+        "directionFine": 0,
+        "range": 5,
+        "steering": 0,
+        "routing": 255
+      },
+      {
+        "directionFine": 1,
+        "range": 6,
+        "steering": 0,
+        "routing": 255
+      },
+      {
+        "directionFine": 1,
+        "range": 6,
+        "steering": 0,
+        "routing": 255
+      },
+      {
+        "directionFine": 1,
+        "range": 7,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 2,
+        "range": 7,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 2,
+        "range": 8,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 2,
+        "range": 8,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 2,
+        "range": 8,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 8,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 9,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 10,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 11,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      }
+    ],
+    [
+      {
+        "directionFine": 13,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 11,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 11,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 10,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 9,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 8,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 8,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 8,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 14,
+        "range": 7,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 14,
+        "range": 7,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 14,
+        "range": 6,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 15,
+        "range": 5,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 15,
+        "range": 5,
+        "steering": 238,
+        "routing": 22
+      },
+      {
+        "directionFine": 15,
+        "range": 5,
+        "steering": 0,
+        "routing": 38
+      },
+      {
+        "directionFine": 0,
+        "range": 5,
+        "steering": 0,
+        "routing": 38
+      },
+      {
+        "directionFine": 0,
+        "range": 5,
+        "steering": 0,
+        "routing": 38
+      },
+      {
+        "directionFine": 1,
+        "range": 5,
+        "steering": 0,
+        "routing": 38
+      },
+      {
+        "directionFine": 1,
+        "range": 5,
+        "steering": 0,
+        "routing": 39
+      },
+      {
+        "directionFine": 1,
+        "range": 6,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 1,
+        "range": 6,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 2,
+        "range": 7,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 2,
+        "range": 7,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 8,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 8,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 8,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 9,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 10,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 10,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 11,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      }
+    ],
+    [
+      {
+        "directionFine": 13,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 11,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 10,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 10,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 8,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 7,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 7,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 6,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 14,
+        "range": 6,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 14,
+        "range": 5,
+        "steering": 238,
+        "routing": 21
+      },
+      {
+        "directionFine": 15,
+        "range": 5,
+        "steering": 238,
+        "routing": 22
+      },
+      {
+        "directionFine": 15,
+        "range": 4,
+        "steering": 0,
+        "routing": 38
+      },
+      {
+        "directionFine": 0,
+        "range": 4,
+        "steering": 0,
+        "routing": 38
+      },
+      {
+        "directionFine": 0,
+        "range": 4,
+        "steering": 0,
+        "routing": 38
+      },
+      {
+        "directionFine": 1,
+        "range": 4,
+        "steering": 0,
+        "routing": 38
+      },
+      {
+        "directionFine": 1,
+        "range": 5,
+        "steering": 0,
+        "routing": 39
+      },
+      {
+        "directionFine": 1,
+        "range": 5,
+        "steering": 34,
+        "routing": 55
+      },
+      {
+        "directionFine": 2,
+        "range": 6,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 2,
+        "range": 6,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 7,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 7,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 8,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 10,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 11,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      }
+    ],
+    [
+      {
+        "directionFine": 13,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 11,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 10,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 7,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 6,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 6,
+        "steering": 238,
+        "routing": 255
+      },
+      {
+        "directionFine": 14,
+        "range": 5,
+        "steering": 238,
+        "routing": 21
+      },
+      {
+        "directionFine": 14,
+        "range": 4,
+        "steering": 238,
+        "routing": 21
+      },
+      {
+        "directionFine": 15,
+        "range": 3,
+        "steering": 238,
+        "routing": 21
+      },
+      {
+        "directionFine": 15,
+        "range": 3,
+        "steering": 238,
+        "routing": 53
+      },
+      {
+        "directionFine": 0,
+        "range": 3,
+        "steering": 0,
+        "routing": 53
+      },
+      {
+        "directionFine": 0,
+        "range": 3,
+        "steering": 0,
+        "routing": 53
+      },
+      {
+        "directionFine": 1,
+        "range": 3,
+        "steering": 0,
+        "routing": 53
+      },
+      {
+        "directionFine": 2,
+        "range": 3,
+        "steering": 34,
+        "routing": 55
+      },
+      {
+        "directionFine": 2,
+        "range": 4,
+        "steering": 34,
+        "routing": 55
+      },
+      {
+        "directionFine": 2,
+        "range": 5,
+        "steering": 34,
+        "routing": 55
+      },
+      {
+        "directionFine": 3,
+        "range": 6,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 6,
+        "steering": 34,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 7,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 10,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 11,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      }
+    ],
+    [
+      {
+        "directionFine": 12,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 11,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 10,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 7,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 6,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 5,
+        "steering": 204,
+        "routing": 5
+      },
+      {
+        "directionFine": 13,
+        "range": 5,
+        "steering": 238,
+        "routing": 5
+      },
+      {
+        "directionFine": 14,
+        "range": 3,
+        "steering": 238,
+        "routing": 21
+      },
+      {
+        "directionFine": 14,
+        "range": 3,
+        "steering": 238,
+        "routing": 21
+      },
+      {
+        "directionFine": 15,
+        "range": 2,
+        "steering": 238,
+        "routing": 53
+      },
+      {
+        "directionFine": 15,
+        "range": 2,
+        "steering": 0,
+        "routing": 53
+      },
+      {
+        "directionFine": 0,
+        "range": 2,
+        "steering": 0,
+        "routing": 53
+      },
+      {
+        "directionFine": 1,
+        "range": 2,
+        "steering": 34,
+        "routing": 53
+      },
+      {
+        "directionFine": 2,
+        "range": 3,
+        "steering": 34,
+        "routing": 55
+      },
+      {
+        "directionFine": 3,
+        "range": 3,
+        "steering": 34,
+        "routing": 55
+      },
+      {
+        "directionFine": 3,
+        "range": 5,
+        "steering": 34,
+        "routing": 48
+      },
+      {
+        "directionFine": 3,
+        "range": 5,
+        "steering": 68,
+        "routing": 48
+      },
+      {
+        "directionFine": 3,
+        "range": 6,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 7,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 3,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 10,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 11,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      }
+    ],
+    [
+      {
+        "directionFine": 12,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 11,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 10,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 7,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 6,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 13,
+        "range": 5,
+        "steering": 204,
+        "routing": 4
+      },
+      {
+        "directionFine": 13,
+        "range": 4,
+        "steering": 204,
+        "routing": 4
+      },
+      {
+        "directionFine": 13,
+        "range": 3,
+        "steering": 204,
+        "routing": 19
+      },
+      {
+        "directionFine": 13,
+        "range": 2,
+        "steering": 238,
+        "routing": 19
+      },
+      {
+        "directionFine": 14,
+        "range": 1,
+        "steering": 238,
+        "routing": 21
+      },
+      {
+        "directionFine": 15,
+        "range": 1,
+        "steering": 238,
+        "routing": 53
+      },
+      {
+        "directionFine": 0,
+        "range": 1,
+        "steering": 0,
+        "routing": 53
+      },
+      {
+        "directionFine": 2,
+        "range": 1,
+        "steering": 34,
+        "routing": 55
+      },
+      {
+        "directionFine": 3,
+        "range": 2,
+        "steering": 34,
+        "routing": 87
+      },
+      {
+        "directionFine": 3,
+        "range": 3,
+        "steering": 68,
+        "routing": 87
+      },
+      {
+        "directionFine": 3,
+        "range": 4,
+        "steering": 68,
+        "routing": 64
+      },
+      {
+        "directionFine": 3,
+        "range": 5,
+        "steering": 68,
+        "routing": 64
+      },
+      {
+        "directionFine": 4,
+        "range": 6,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 7,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 10,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 11,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      }
+    ],
+    [
+      {
+        "directionFine": 12,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 12,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 11,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 10,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 9,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 8,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 7,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 6,
+        "steering": 204,
+        "routing": 255
+      },
+      {
+        "directionFine": 12,
+        "range": 5,
+        "steering": 204,
+        "routing": 4
+      },
+      {
+        "directionFine": 12,
+        "range": 4,
+        "steering": 204,
+        "routing": 4
+      },
+      {
+        "directionFine": 12,
+        "range": 3,
+        "steering": 204,
+        "routing": 19
+      },
+      {
+        "directionFine": 12,
+        "range": 2,
+        "steering": 204,
+        "routing": 19
+      },
+      {
+        "directionFine": 13,
+        "range": 1,
+        "steering": 204,
+        "routing": 19
+      },
+      {
+        "directionFine": 14,
+        "range": 0,
+        "steering": 238,
+        "routing": 21
+      },
+      {
+        "directionFine": 2,
+        "range": 0,
+        "steering": 34,
+        "routing": 55
+      },
+      {
+        "directionFine": 3,
+        "range": 1,
+        "steering": 68,
+        "routing": 87
+      },
+      {
+        "directionFine": 4,
+        "range": 2,
+        "steering": 68,
+        "routing": 87
+      },
+      {
+        "directionFine": 4,
+        "range": 3,
+        "steering": 68,
+        "routing": 87
+      },
+      {
+        "directionFine": 4,
+        "range": 4,
+        "steering": 68,
+        "routing": 64
+      },
+      {
+        "directionFine": 4,
+        "range": 5,
+        "steering": 68,
+        "routing": 64
+      },
+      {
+        "directionFine": 4,
+        "range": 6,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 7,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 8,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 9,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 10,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 11,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      },
+      {
+        "directionFine": 4,
+        "range": 12,
+        "steering": 68,
+        "routing": 255
+      }
+    ]
+  ]
+}

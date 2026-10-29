@@ -1,0 +1,601 @@
+{
+  "dispatch": [
+    "d0c6",
+    "e717",
+    "e71f",
+    "eb90",
+    "d0c7",
+    "d0c7",
+    "cde5",
+    "d0c6",
+    "eb90",
+    "e785",
+    "d0c6",
+    "dae4",
+    "dacb",
+    "d098",
+    "d415",
+    "d2dc",
+    "d537",
+    "d2ff",
+    "d5c4",
+    "d386",
+    "d6ab",
+    "d325",
+    "daec",
+    "d3b4",
+    "d686",
+    "e6bb",
+    "d0f2",
+    "d045",
+    "d170",
+    "d1b9",
+    "dff3",
+    "d1a1",
+    "de88",
+    "de43",
+    "de0b",
+    "d16f",
+    "dc6e",
+    "dd4e",
+    "ddac",
+    "ddd3",
+    "ddec",
+    "df27",
+    "df27",
+    "df28",
+    "dbe9",
+    "e02b",
+    "e02b",
+    "d01e",
+    "df29",
+    "df29",
+    "d9ac",
+    "d9ac",
+    "d855",
+    "d8c3",
+    "d0c6",
+    "d8de",
+    "de64",
+    "df71",
+    "df7c",
+    "df7c",
+    "da1a",
+    "da86",
+    "d7df",
+    "db9c",
+    "daff",
+    "e733",
+    "e655",
+    "d0c6",
+    "d339",
+    "d351",
+    "d36b",
+    "d379",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d802",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "cda0",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "d0c6",
+    "e074",
+    "d16f",
+    "d0c6"
+  ],
+  "handlers": [
+    {
+      "entry": "d0c6",
+      "kinds": [
+        0, 7, 10, 54, 67, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84,
+        85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 97, 98, 99, 100, 101, 102,
+        103, 104, 105, 106, 107, 108, 109, 110, 111, 113, 114, 115, 116, 117,
+        118, 119, 120, 121, 122, 123, 124, 127
+      ],
+      "implemented": true,
+      "empty": true,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "e717",
+      "kinds": [1],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "e71f",
+      "kinds": [2],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "eb90",
+      "kinds": [3, 8],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d0c7",
+      "kinds": [4, 5],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "cde5",
+      "kinds": [6],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "e785",
+      "kinds": [9],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "dae4",
+      "kinds": [11],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "dacb",
+      "kinds": [12],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d098",
+      "kinds": [13],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d415",
+      "kinds": [14],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d2dc",
+      "kinds": [15],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d537",
+      "kinds": [16],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d2ff",
+      "kinds": [17],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d5c4",
+      "kinds": [18],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d386",
+      "kinds": [19],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d6ab",
+      "kinds": [20],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d325",
+      "kinds": [21],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "daec",
+      "kinds": [22],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d3b4",
+      "kinds": [23],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d686",
+      "kinds": [24],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "e6bb",
+      "kinds": [25],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d0f2",
+      "kinds": [26],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d045",
+      "kinds": [27],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d170",
+      "kinds": [28],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d1b9",
+      "kinds": [29],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "dff3",
+      "kinds": [30],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d1a1",
+      "kinds": [31],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "de88",
+      "kinds": [32],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "de43",
+      "kinds": [33],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "de0b",
+      "kinds": [34],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d16f",
+      "kinds": [35, 126],
+      "implemented": true,
+      "empty": true,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "dc6e",
+      "kinds": [36],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "dd4e",
+      "kinds": [37],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "ddac",
+      "kinds": [38],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "ddd3",
+      "kinds": [39],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "ddec",
+      "kinds": [40],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "df27",
+      "kinds": [41, 42],
+      "implemented": true,
+      "empty": true,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "df28",
+      "kinds": [43],
+      "implemented": true,
+      "empty": true,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "dbe9",
+      "kinds": [44],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "e02b",
+      "kinds": [45, 46],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d01e",
+      "kinds": [47],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "df29",
+      "kinds": [48, 49],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d9ac",
+      "kinds": [50, 51],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d855",
+      "kinds": [52],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d8c3",
+      "kinds": [53],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d8de",
+      "kinds": [55],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "de64",
+      "kinds": [56],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "df71",
+      "kinds": [57],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "df7c",
+      "kinds": [58, 59],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "da1a",
+      "kinds": [60],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "da86",
+      "kinds": [61],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d7df",
+      "kinds": [62],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "db9c",
+      "kinds": [63],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "daff",
+      "kinds": [64],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "e733",
+      "kinds": [65],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "e655",
+      "kinds": [66],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d339",
+      "kinds": [68],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d351",
+      "kinds": [69],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d36b",
+      "kinds": [70],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d379",
+      "kinds": [71],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "d802",
+      "kinds": [96],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "cda0",
+      "kinds": [112],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    },
+    {
+      "entry": "e074",
+      "kinds": [125],
+      "implemented": true,
+      "empty": false,
+      "verification": "Native translation with original routine fixtures; dependency and integration limits are documented in docs/boss-evidence.md, docs/movement-evidence.md and docs/combat-evidence.md"
+    }
+  ],
+  "totalDistinct": 64,
+  "nonNoop": 60,
+  "implemented": 64,
+  "implementedNonNoop": 60,
+  "remaining": 0,
+  "campaignIntegrationComplete": false,
+  "commonGameLoopImplemented": true,
+  "playerWeaponsImplemented": true,
+  "pageEventsImplemented": true,
+  "menusImplemented": true,
+  "introImplemented": true,
+  "passwordsImplemented": true,
+  "radioDialogsImplemented": true,
+  "endingImplemented": true
+}

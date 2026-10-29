@@ -1,0 +1,223 @@
+{
+  "fixtures": [
+    {
+      "graph": {
+        "cmd_b000": {
+          "action": "move",
+          "value": 4,
+          "next": "cmd_b001"
+        },
+        "cmd_b001": {
+          "action": "switchAI",
+          "value": 0,
+          "kind": 7
+        }
+      },
+      "frames": 256,
+      "sha256": "d624d44586483e576a4c01ad06d9911dc7cda8951f9afbd3f61913d5ad88bf1e"
+    },
+    {
+      "graph": {
+        "cmd_b000": {
+          "action": "speed",
+          "value": 14,
+          "next": "cmd_b001"
+        },
+        "cmd_b001": {
+          "action": "move",
+          "value": 2,
+          "next": "cmd_b002"
+        },
+        "cmd_b002": {
+          "action": "switchAI",
+          "value": 0,
+          "kind": 7
+        }
+      },
+      "contact": 0,
+      "frames": 256,
+      "sha256": "7edf321bf732fc72bb402aa426437effc8c0c3967e45a863b601b98173d2b3ff"
+    },
+    {
+      "graph": {
+        "cmd_b000": {
+          "action": "speed",
+          "value": 14,
+          "next": "cmd_b001"
+        },
+        "cmd_b001": {
+          "action": "move",
+          "value": 2,
+          "next": "cmd_b002"
+        },
+        "cmd_b002": {
+          "action": "switchAI",
+          "value": 0,
+          "kind": 7
+        }
+      },
+      "contact": 129,
+      "frames": 256,
+      "sha256": "98da44e7771ec0a7f34471ce96143cd9916ff4f59ef8e5897bc94981ec0049be"
+    },
+    {
+      "graph": {
+        "cmd_b000": {
+          "action": "branchRange",
+          "value": 15,
+          "target": "cmd_b006",
+          "next": "cmd_b003"
+        },
+        "cmd_b003": {
+          "action": "wait",
+          "value": 1,
+          "next": "cmd_b004"
+        },
+        "cmd_b004": {
+          "action": "switchAI",
+          "value": 0,
+          "kind": 7
+        },
+        "cmd_b006": {
+          "action": "wait",
+          "value": 2,
+          "next": "cmd_b007"
+        },
+        "cmd_b007": {
+          "action": "switchAI",
+          "value": 0,
+          "kind": 7
+        }
+      },
+      "frames": 256,
+      "sha256": "b9252d701e71a9360ea6dd9a5e53e406a8240c8af7d6b7de38d3599ff33bb8e4"
+    },
+    {
+      "graph": {
+        "cmd_b000": {
+          "action": "branchRange",
+          "value": 0,
+          "target": "cmd_b006",
+          "next": "cmd_b003"
+        },
+        "cmd_b003": {
+          "action": "wait",
+          "value": 1,
+          "next": "cmd_b004"
+        },
+        "cmd_b004": {
+          "action": "switchAI",
+          "value": 0,
+          "kind": 7
+        },
+        "cmd_b006": {
+          "action": "wait",
+          "value": 2,
+          "next": "cmd_b007"
+        },
+        "cmd_b007": {
+          "action": "switchAI",
+          "value": 0,
+          "kind": 7
+        }
+      },
+      "frames": 256,
+      "sha256": "72eb0c94132528cae7685bdacd1d7bedc00f32eb614afd20816ea10cbbe4888d"
+    },
+    {
+      "graph": {
+        "cmd_b000": {
+          "action": "triggerRange",
+          "value": 7,
+          "next": "cmd_b001"
+        },
+        "cmd_b001": {
+          "action": "fallbackAI",
+          "value": 0,
+          "kind": 7,
+          "next": "cmd_b003"
+        },
+        "cmd_b003": {
+          "action": "move",
+          "value": 4,
+          "next": "cmd_b004"
+        },
+        "cmd_b004": {
+          "action": "switchAI",
+          "value": 0,
+          "kind": 7
+        }
+      },
+      "frames": 256,
+      "sha256": "110936f432961efb805c3b9187ff1ce489991f64dfa3cf0cec70792172831e61"
+    },
+    {
+      "graph": {
+        "cmd_b000": {
+          "action": "aimFire",
+          "value": 3,
+          "next": "cmd_b001"
+        },
+        "cmd_b001": {
+          "action": "switchAI",
+          "value": 0,
+          "kind": 7
+        }
+      },
+      "frames": 256,
+      "sha256": "28c7f2aa8e30012244907e903f5f21cf2a50e7c0268e037c2be3fe9c33b13776"
+    },
+    {
+      "graph": {
+        "cmd_b000": {
+          "action": "wait",
+          "value": 1,
+          "next": "cmd_b001"
+        },
+        "cmd_b001": {
+          "action": "jump",
+          "value": 0,
+          "target": "cmd_b004",
+          "next": "cmd_b004"
+        },
+        "cmd_b004": {
+          "action": "switchAI",
+          "value": 0,
+          "kind": 7
+        }
+      },
+      "frames": 256,
+      "sha256": "52a68770334b134afa8e98fe9b5128ce9c0d62576e5206a8453f708bf3c9899e"
+    },
+    {
+      "graph": {
+        "cmd_b000": {
+          "action": "face",
+          "value": 3,
+          "next": "cmd_b001"
+        },
+        "cmd_b001": {
+          "action": "switchAI",
+          "value": 0,
+          "kind": 7
+        }
+      },
+      "timer": 5,
+      "kind": 0,
+      "frames": 256,
+      "sha256": "d29fbc7a4c0a1c5a75a7f49ed7937982bbddfe461afd8d08489568a298bcddb5"
+    },
+    {
+      "graph": {
+        "cmd_b000": {
+          "action": "switchAI",
+          "value": 0,
+          "kind": 7
+        }
+      },
+      "earlyExit": true,
+      "frames": 256,
+      "sha256": "8101f9d1618c5c9462e4295fc46798907921b40b70204bd11deecf699bf79c96"
+    }
+  ]
+}

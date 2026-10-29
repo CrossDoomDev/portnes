@@ -1,0 +1,138 @@
+{
+  "seed": 42631,
+  "helpers": [
+    {
+      "name": "anchor",
+      "cases": 512,
+      "sha256": "edac7ab1ff718f9e26b35580a3a10da290da0e87e999189309501733a9b4462d"
+    },
+    {
+      "name": "arenaCamera",
+      "cases": 512,
+      "sha256": "1e42a126378401174d8559d923db01d834950cc498346bdcffe7e633de5af5de"
+    },
+    {
+      "name": "bossMove",
+      "cases": 512,
+      "sha256": "c2465b20d62f5c118b0eacd2ab5ae84f627d974ac006f71a76102bd7db5986bb"
+    },
+    {
+      "name": "pose",
+      "cases": 512,
+      "sha256": "09e779eed42abac8d36df769500a3abb50189a15ba5264d0df37582352bf12e8"
+    },
+    {
+      "name": "poseShot",
+      "cases": 512,
+      "sha256": "4620d20ba86b279e8154723eaeb3a4b0561554e0661bca967dc64240ae3c587b"
+    },
+    {
+      "name": "orbit",
+      "cases": 512,
+      "sha256": "1ba7f87c6aea9fcc878ea115570fa8ce0f4c85e60508dde8a9d1c90bcaa0da8f"
+    },
+    {
+      "name": "spawnLayout",
+      "cases": 512,
+      "sha256": "90c5aa5ee60b8be1f42a5e3271c73d07765f28bad48736f3ec4ae98a9178f467"
+    }
+  ],
+  "handlers": [
+    {
+      "entry": "d415",
+      "kind": 14,
+      "cases": 1024,
+      "sha256": "854649d02f387d11ee8303ea2d9c8d9db0080b79d6ea169c21b3147dd7a7bb64"
+    },
+    {
+      "entry": "d537",
+      "kind": 16,
+      "cases": 1024,
+      "sha256": "c1902dd4cb9629bbedc2b2edfa203068adf462f379b72c7f19484b5fbd5e3b72"
+    },
+    {
+      "entry": "d5c4",
+      "kind": 18,
+      "cases": 1024,
+      "sha256": "7085b919595ce810c2164ded8cc50c466bc5d6cca17a967316c53de46be6d841"
+    },
+    {
+      "entry": "df29",
+      "kind": 48,
+      "cases": 1024,
+      "sha256": "9e5bfe1960766864259cb698498c967febfeaf21ae7eed0dacf6b9c83cdfe7cd"
+    },
+    {
+      "entry": "df7c",
+      "kind": 58,
+      "cases": 1024,
+      "sha256": "084875564a1a8f71cf3d4e41e8ce3d27c2812e9455b710f76f5962959ced86e5"
+    },
+    {
+      "entry": "d9ac",
+      "kind": 50,
+      "cases": 1024,
+      "sha256": "bb805f56af6c2ba97d50fda833fc64d24f874f5ea1c2d1aaecff838b4e0d3ac4"
+    },
+    {
+      "entry": "da86",
+      "kind": 61,
+      "cases": 1024,
+      "sha256": "8b54bbf0995861a2e62dc1ef1bf47dab302c6d93b851699a7f3a0fb238ab4d8f"
+    },
+    {
+      "entry": "d8de",
+      "kind": 55,
+      "cases": 1024,
+      "sha256": "32520404cb671c2e3cd7ae4183e80943cac2ec835eacc0dcd253e959e03b2573"
+    },
+    {
+      "entry": "da1a",
+      "kind": 60,
+      "cases": 1024,
+      "sha256": "d312d6af775320344616c1ba8682ae16f15c6f5c53c4066ca0ffbf3e2b01cc83"
+    },
+    {
+      "entry": "dbe9",
+      "kind": 44,
+      "cases": 1024,
+      "sha256": "2ad20e689ee3b8622284f670d34f3f459d2fffba1cb4eddbd354d6b6e5330a69"
+    },
+    {
+      "entry": "daff",
+      "kind": 64,
+      "cases": 1024,
+      "sha256": "e5adfe72b5b2f7f79b415fd26ca0433fa9ec3cad3859a4d2208d563d505d8c27"
+    },
+    {
+      "entry": "e733",
+      "kind": 65,
+      "cases": 1024,
+      "sha256": "27e5e43879698d4f960aa8cfad848709683d43c9a1bd0356f5c9cd3d82ad3c5a"
+    },
+    {
+      "entry": "d2dc",
+      "kind": 15,
+      "cases": 1024,
+      "sha256": "61431c3d85724ae666926dae501dca8ebfe2800ebfdf4233454172288f2d2c86"
+    },
+    {
+      "entry": "d2ff",
+      "kind": 17,
+      "cases": 1024,
+      "sha256": "ee6576f4977ab83ad5eb4031291db7ecf491439bfae6f740ab1500b2895fa94f"
+    },
+    {
+      "entry": "cda0",
+      "kind": 112,
+      "cases": 1024,
+      "sha256": "1df7d42b351e4d2d8537155b3275ea8e56a9a01d7b0f35df8031555352af2f40"
+    },
+    {
+      "entry": "cde5",
+      "kind": 6,
+      "cases": 1024,
+      "sha256": "0ed0597bcf067bf243148e0a97ee01905caaef920f938ea00646224fb61f07c2"
+    }
+  ]
+}

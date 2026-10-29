@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "cost": 1,
+      "availableMask": 255,
+      "resource": 0,
+      "equipmentMask": 1,
+      "modifierMask": 0
+    },
+    {
+      "cost": 1,
+      "availableMask": 255,
+      "resource": 1,
+      "equipmentMask": 0,
+      "modifierMask": 128
+    },
+    {
+      "cost": 1,
+      "availableMask": 255,
+      "resource": 2,
+      "equipmentMask": 0,
+      "modifierMask": 64
+    },
+    {
+      "cost": 1,
+      "availableMask": 255,
+      "resource": 3,
+      "equipmentMask": 0,
+      "modifierMask": 32
+    },
+    {
+      "cost": 8,
+      "availableMask": 255,
+      "resource": 4,
+      "equipmentMask": 0,
+      "modifierMask": 16
+    },
+    {
+      "cost": 2,
+      "availableMask": 255,
+      "resource": 5,
+      "equipmentMask": 0,
+      "modifierMask": 8
+    },
+    {
+      "cost": 128,
+      "availableMask": 128,
+      "resource": 6,
+      "equipmentMask": 0,
+      "modifierMask": 4
+    },
+    {
+      "cost": 64,
+      "availableMask": 64,
+      "resource": 6,
+      "equipmentMask": 0,
+      "modifierMask": 2
+    },
+    {
+      "cost": 32,
+      "availableMask": 32,
+      "resource": 6,
+      "equipmentMask": 0,
+      "modifierMask": 1
+    }
+  ]
+}

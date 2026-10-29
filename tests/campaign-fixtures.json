@@ -1,0 +1,40 @@
+{
+  "seed": 74317,
+  "routines": [
+    {
+      "name": "route",
+      "cases": 2048,
+      "sha256": "1ff6a66a8471c2a5c13c4a0dbe4721c2f8310653a0accea4c4a63d1363dedb82"
+    },
+    {
+      "name": "music",
+      "cases": 2048,
+      "sha256": "c848978ad058fc0fff7d6707b74076e6304f17261716ccf7d6082c76abbbca1a"
+    },
+    {
+      "name": "radio",
+      "cases": 2048,
+      "sha256": "6c9c332c3b6ed9c31b06d910ce0345beb573cdf2bef960eaf0645a758e246fca"
+    },
+    {
+      "name": "refreshEnvironment",
+      "cases": 2048,
+      "sha256": "4c4e919ecf74a365f74b6dc3274d1a49b6c776069c72c1f803fc919dd1c04ef9"
+    },
+    {
+      "name": "sync",
+      "cases": 2048,
+      "sha256": "1371a35204b176135aad8e171c71c1c6144336fd303eb8e274c19eba4366ac2e"
+    },
+    {
+      "name": "updateRadio",
+      "cases": 2048,
+      "sha256": "339da6742b3c76b23e2aa4fb3c6383e3c3bdc3a3e16db5d8ab0d0efdcfba4780"
+    },
+    {
+      "name": "transition",
+      "cases": 2048,
+      "sha256": "1eb77ec2fed9a3cffa131a2353f187484ab4cfd7c0c4e6fa81e1b2876526f4ec"
+    }
+  ]
+}

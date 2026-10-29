@@ -1,118 +1,73 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import fs from "node:fs";
 import { createHash } from "node:crypto";
-import NES from "../vendor/jsnes/nes.js";
-import { makeMaterialFrame } from "../src/materials.js";
-import { validateSave, SAVE_VERSION } from "../src/storage.js";
-import { CARTRIDGE } from "../src/cartridge.js";
-
-const rom = fs.readFileSync(new URL("../rom/iron-tank.nes", import.meta.url));
-const digest = (value) =>
-  createHash("sha256").update(JSON.stringify(value)).digest("hex");
-function makeGame() {
-  let frame,
-    audioHash = 0,
-    audioCount = 0;
-  const nes = new NES({
-    sampleRate: 48000,
-    onFrame: (value) => {
-      frame = value;
-    },
-    onAudioSample: (l, r) => {
-      audioHash = ((audioHash * 33) ^ ((l * 1e7) | 0) ^ ((r * 1e7) | 0)) | 0;
-      audioCount++;
-    },
-  });
-  nes.loadROM(rom);
-  return { nes, frame: () => frame, audio: () => [audioHash, audioCount] };
-}
-function setButtons(nes, frame) {
-  const down = new Set();
-  if (frame >= 180 && frame < 184) down.add(3);
-  if (frame >= 1450 && frame < 1650) down.add(4);
-  if (frame >= 1650 && frame < 1700) {
-    down.add(1);
-    down.add(7);
+import { NativeGame } from "../src/game.js";
+import { gameConfig, gameScenario, gameMask, gameOutput, readGameFixture } from "./game-inputs.mjs";
+const config = gameConfig();
+test("eight native game sequences reproduce 9984 continuous original frames, including 340 actual RNG calls", () => {
+ const fixtures = readGameFixture("./game-sequence-fixtures.json");
+ for (const fixture of fixtures.scenarios) {
+  const g = gameScenario(config, fixture.scenario), hash = createHash("sha256");
+  let calls = 0;
+  const random = g.random;
+  g.random = (...args) => { calls++; return random(...args); };
+  for (let frame = 0; frame < fixture.frames; frame++) {
+   g.step(gameMask(fixture.scenario, frame));
+   hash.update(Uint8Array.from(gameOutput(g)));
   }
-  if (frame >= 1700 && frame < 1800) {
-    down.add(0);
-    down.add(1);
-  }
-  if (frame >= 1850 && frame < 1853) down.add(2);
-  if (frame >= 1920 && frame < 1923) down.add(2);
-  for (let button = 0; button < 8; button++)
-    nes[down.has(button) ? "buttonDown" : "buttonUp"](1, button);
-}
-
-test("new renderer leaves CPU, mapper, PPU and audio identical across title, briefing, landing, movement, fire and Select", () => {
-  const original = makeGame(),
-    newGraphics = makeGame();
-  const target = new Uint8Array(245760),
-    signatures = new Set();
-  let changedPixels = 0;
-  for (let frame = 0; frame < 2100; frame++) {
-    setButtons(original.nes, frame);
-    setButtons(newGraphics.nes, frame);
-    original.nes.frame();
-    newGraphics.nes.frame();
-    if (frame % 7 === 0) {
-      makeMaterialFrame(newGraphics.frame(), newGraphics.nes.ppu, target);
-      assert.deepEqual(newGraphics.frame(), original.frame());
-      if (frame > 1450) signatures.add(digest(Array.from(newGraphics.frame())));
-      if (frame === 1505)
-        for (let i = 0; i < 61440; i++) {
-          if (
-            target[i * 4] !== (original.frame()[i] & 255) ||
-            target[i * 4 + 1] !== ((original.frame()[i] >> 8) & 255)
-          )
-            changedPixels++;
-        }
-    }
-    if ([179, 500, 1400, 1650, 1870, 2099].includes(frame)) {
-      assert.equal(
-        digest(newGraphics.nes.toJSON()),
-        digest(original.nes.toJSON()),
-        `state diverged at frame ${frame}`,
-      );
-      assert.deepEqual(newGraphics.audio(), original.audio());
-    }
-  }
-  assert.ok(changedPixels > 50000, `Only ${changedPixels} pixels changed`);
-  assert.ok(signatures.size > 20, "Game did not animate");
-  assert.ok(original.audio()[1] > 1000000, "APU did not generate audio");
+  assert.equal(calls, fixture.randomCalls, `RNG scenario ${fixture.scenario}`);
+  assert.equal(hash.digest("hex"), fixture.sha256, `game scenario ${fixture.scenario}`);
+ }
 });
-
-test("save state resumes the same game and rejects another cartridge", () => {
-  const game = makeGame();
-  for (let frame = 0; frame < 1650; frame++) {
-    setButtons(game.nes, frame);
-    game.nes.frame();
+test("game pause and inventory freeze actors while polling controls; selected upgrades spend their own stocks", () => {
+ const g = new NativeGame(config), actors = () => JSON.stringify(g.actors);
+ g.step(16); assert.equal(g.state.mode & 63, 1);
+ const snapshot = actors();
+ for (let n = 0; n < 8; n++) g.step(0);
+ assert.equal(actors(), snapshot);
+ g.step(16); assert.equal(g.state.mode & 63, 0);
+ g.step(0); g.step(32); assert.equal(g.state.mode & 63, 2);
+ g.state.resources[0] = 5;
+ g.step(0); g.step(128); assert.equal(g.equipment.active(0), 1);
+ g.step(0); g.step(32); assert.equal(g.state.mode & 63, 0);
+ g.step(0); g.step(128);
+ assert.equal(g.state.resources[0], 4);
+ assert.equal(g.state.reserveEnergy, 0);
+ assert.ok(g.events.some(e => e.type === "shot"));
+ g.state.inventoryIndex = 6; g.state.modifiers |= 4;
+ g.step(0); g.step(32); g.step(0);
+ assert.equal(g.state.inventoryIndex, 0); assert.equal(g.state.modifiers & 4, 0);
+});
+test("four scene-transition sequences match 512 continuous original frames, including arena layout allocation and map replacement", () => {
+ for (const fixture of readGameFixture("./game-transition-fixtures.json").scenarios) {
+  const g = gameScenario(config, fixture.scenario), hash = createHash("sha256");
+  for (let frame = 0; frame < fixture.frames; frame++) {
+   g.step(gameMask(fixture.scenario, frame));
+   hash.update(Uint8Array.from(gameOutput(g)));
   }
-  const save = {
-    version: SAVE_VERSION,
-    romHash: CARTRIDGE.sha256,
-    createdAt: "2026-10-28T12:00:00Z",
-    frame: 1650,
-    state: game.nes.toJSON(),
-  };
-  validateSave(save, CARTRIDGE.sha256);
-  assert.throws(
-    () => validateSave({ ...save, romHash: "different" }, CARTRIDGE.sha256),
-    /Сохранение повреждено/,
-  );
-  const replay = makeGame();
-  replay.nes.fromJSON(JSON.parse(JSON.stringify(save.state)));
-  for (let frame = 1650; frame < 1800; frame++) {
-    setButtons(game.nes, frame);
-    setButtons(replay.nes, frame);
-    game.nes.frame();
-    replay.nes.frame();
-  }
-  assert.deepEqual(
-    Array.from(replay.nes.cpu.mem),
-    Array.from(game.nes.cpu.mem),
-  );
-  assert.deepEqual(replay.frame(), game.frame());
-  assert.equal(replay.nes.cpu.REG_PC, game.nes.cpu.REG_PC);
+  assert.equal(hash.digest("hex"), fixture.sha256, `transition ${fixture.scenario}`);
+ }
+});
+test("checkpoint lookup, reset, live terrain reload and layout match 128 original resumes", () => {
+ const fixture = readGameFixture("./checkpoint-fixtures.json"), hash = createHash("sha256");
+ for (let n = 0; n < fixture.cases; n++) {
+  const g = new NativeGame(config, { state: { worldPage: n * 17 & 511, frameCounter: n } });
+  g.state.mode = 6;
+  g.state.resources = [n % 41, (n + 1) % 41, (n + 2) % 41, (n + 3) % 41, n % 25];
+  g.state.reserveEnergy = n % 33; g.state.modifiers = n & 255;
+  g.step(0); hash.update(Uint8Array.from(gameOutput(g)));
+ }
+ assert.equal(hash.digest("hex"), fixture.sha256);
+});
+test("checkpoint resume restores the checkpoint world and preserves collected stock", () => {
+ const g = new NativeGame(config);
+ g.state.resources = [3, 4, 5, 6, 7]; g.state.modifiers = 255;
+ g.state.reserveEnergy = 8; g.state.mode = 6;
+ g.step(0);
+ assert.equal(g.state.mode, 0);
+ assert.equal(g.state.modifiers, 0);
+ assert.deepEqual(g.state.resources, [3, 4, 5, 6, 7]);
+ assert.equal(g.state.reserveEnergy, 32);
+ assert.equal(g.actors[0].counter2, 32);
+ assert.ok(g.events.some(e => e.type === "checkpoint"));
 });

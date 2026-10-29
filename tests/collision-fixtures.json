@@ -1,0 +1,11 @@
+{
+  "seed": 18431,
+  "collisions": {
+    "cases": 4096,
+    "sha256": "f443129419b38d94ce53436280d3a1f88ae0c1c2bf7732ee5f0cd547d163edb4"
+  },
+  "damage": {
+    "cases": 4096,
+    "sha256": "ac42ba8eb57768a62165ce80c4eb7dce644aecdaee8522794baefde888c245c6"
+  }
+}

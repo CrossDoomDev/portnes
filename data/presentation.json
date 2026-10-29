@@ -1,0 +1,2265 @@
+{
+  "schema": 1,
+  "messages": {
+    "1": {
+      "lines": [
+        "\"SNAKE!\"",
+        "\"Watch out -use radar-",
+        "gigantic enemy objects",
+        "up ahead!\""
+      ]
+    },
+    "2": {
+      "lines": [
+        "Contact our spy",
+        "\"TOMMY J\".  He is in",
+        "prisoners camp.",
+        "He will give you info",
+        "on long range bullet",
+        "ability."
+      ]
+    },
+    "3": {
+      "lines": [
+        "Snake!",
+        "Found the train firing",
+        "bullets by radar.",
+        "Be Careful!"
+      ]
+    },
+    "4": {
+      "lines": [
+        "Iron Snake,this is the",
+        "back up unit. Find the",
+        "target. Destroy it!",
+        "Enemy's long range",
+        "bullets are awesome.",
+        "Allies are destroyed."
+      ]
+    },
+    "5": {
+      "lines": [
+        "Look out ahead,",
+        "there is the long range",
+        "firing bullet.",
+        "Destroy it immediately.",
+        "The safety of the back",
+        "up unit is your goal."
+      ]
+    },
+    "6": {
+      "lines": [
+        "The landing was a",
+        "success.",
+        "We'll start the next",
+        "operation now.",
+        "Thank you, Snake. We",
+        "avoided total wipeout."
+      ]
+    },
+    "7": {
+      "lines": [
+        "Additional orders:",
+        "New contact, named",
+        "Ichiban."
+      ]
+    },
+    "8": {
+      "lines": [
+        "\"SNAKE!\".",
+        "Watch it!",
+        "Found enemy's secret",
+        "base by radar."
+      ]
+    },
+    "9": {
+      "lines": [
+        "Operation was",
+        "successful. we now",
+        "occupy the station.",
+        "Moving onto next",
+        "operation."
+      ]
+    },
+    "10": {
+      "lines": [
+        "There is a power",
+        "station ahead.",
+        "Blow it up and cut off",
+        "electrical supply."
+      ]
+    },
+    "11": {
+      "lines": [
+        "Unit calling..........",
+        "we are being attacked",
+        "from a bomber.",
+        "Iron Snake, get to",
+        "enemy's air force base",
+        "and turn it to rubble!"
+      ]
+    },
+    "12": {
+      "lines": [
+        "Snake! Bombers are eve-",
+        "rywhere.We are having a",
+        "tough time hanging on!",
+        "If only one of us lives",
+        ",we will do our best to",
+        "support you. Good luck."
+      ]
+    },
+    "13": {
+      "lines": [
+        "The bombs have stopped.",
+        "Cannot find your",
+        "postion................",
+        "radar is blocked!",
+        "Snake...... stay alive!",
+        "Go for it !"
+      ]
+    },
+    "14": {
+      "lines": [
+        "Surrender immediately!",
+        "No way you can win!",
+        "Drop all arms and",
+        "weapons! Otherwise....",
+        "we wipe you out!"
+      ]
+    },
+    "252": {
+      "lines": [
+        "Thanks."
+      ]
+    },
+    "253": {
+      "lines": [
+        "I'm your friend. Stay",
+        "on the railroad, go",
+        "straight through the",
+        "town. The enemy train",
+        "is there.",
+        "Shoot it. Good luck."
+      ]
+    },
+    "254": {
+      "lines": [
+        "I will help you get",
+        "into the enemy's base",
+        "and destroy their",
+        "secret weapons."
+      ]
+    },
+    "255": {
+      "lines": [
+        "Help!",
+        "I'm only survivor! All",
+        "allies were destroyed.",
+        "Iron Snake......get to",
+        "enemy headquarters and",
+        "blow it to bits!"
+      ]
+    }
+  },
+  "cutscenes": [
+    [
+      {
+        "action": "place",
+        "slot": 1,
+        "appearance": 232,
+        "x": 120,
+        "y": 88,
+        "key": "scene_aa04"
+      },
+      {
+        "action": "place",
+        "slot": 2,
+        "appearance": 254,
+        "x": 120,
+        "y": 88,
+        "key": "scene_aa09"
+      },
+      {
+        "action": "place",
+        "slot": 0,
+        "appearance": 216,
+        "x": 136,
+        "y": 232,
+        "key": "scene_aa0e"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 3,
+        "phase": 8,
+        "key": "scene_aa13"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_aa18"
+      },
+      {
+        "action": "sound",
+        "id": 57,
+        "key": "scene_aa1a"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 3,
+        "phase": 136,
+        "key": "scene_aa1c"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_aa21"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 217,
+        "key": "scene_aa23"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 7,
+        "speed": 2,
+        "phase": 6,
+        "key": "scene_aa26"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_aa2b"
+      },
+      {
+        "action": "sound",
+        "id": 63,
+        "key": "scene_aa2d"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 6,
+        "speed": 2,
+        "phase": 10,
+        "key": "scene_aa2f"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_aa34"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 5,
+        "speed": 2,
+        "phase": 6,
+        "key": "scene_aa36"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_aa3b"
+      },
+      {
+        "action": "hide",
+        "slot": 0,
+        "key": "scene_aa3d"
+      },
+      {
+        "action": "wait",
+        "frames": 30,
+        "key": "scene_aa3f"
+      },
+      {
+        "action": "move",
+        "slot": 1,
+        "heading": 0,
+        "speed": 3,
+        "phase": 48,
+        "key": "scene_aa41"
+      },
+      {
+        "action": "move",
+        "slot": 2,
+        "heading": 0,
+        "speed": 3,
+        "phase": 48,
+        "key": "scene_aa46"
+      },
+      {
+        "action": "sound",
+        "id": 35,
+        "key": "scene_aa4b"
+      },
+      {
+        "action": "waitActor",
+        "slot": 2,
+        "key": "scene_aa4d"
+      },
+      {
+        "action": "move",
+        "slot": 1,
+        "heading": 0,
+        "speed": 3,
+        "phase": 48,
+        "key": "scene_aa4f"
+      },
+      {
+        "action": "move",
+        "slot": 2,
+        "heading": 0,
+        "speed": 3,
+        "phase": 48,
+        "key": "scene_aa54"
+      },
+      {
+        "action": "sound",
+        "id": 35,
+        "key": "scene_aa59"
+      },
+      {
+        "action": "waitActor",
+        "slot": 2,
+        "key": "scene_aa5b"
+      },
+      {
+        "action": "wait",
+        "frames": 30,
+        "key": "scene_aa5d"
+      },
+      {
+        "action": "end",
+        "key": "scene_aa5f"
+      }
+    ],
+    [
+      {
+        "action": "sound",
+        "id": 26,
+        "key": "scene_aa60"
+      },
+      {
+        "action": "place",
+        "slot": 2,
+        "appearance": 234,
+        "x": 104,
+        "y": 232,
+        "key": "scene_aa62"
+      },
+      {
+        "action": "place",
+        "slot": 3,
+        "appearance": 236,
+        "x": 104,
+        "y": 232,
+        "key": "scene_aa67"
+      },
+      {
+        "action": "place",
+        "slot": 7,
+        "appearance": 235,
+        "x": 104,
+        "y": 231,
+        "key": "scene_aa6c"
+      },
+      {
+        "action": "place",
+        "slot": 5,
+        "appearance": 255,
+        "x": 104,
+        "y": 231,
+        "key": "scene_aa71"
+      },
+      {
+        "action": "place",
+        "slot": 8,
+        "appearance": 242,
+        "x": 104,
+        "y": 232,
+        "key": "scene_aa76"
+      },
+      {
+        "action": "move",
+        "slot": 2,
+        "heading": 0,
+        "speed": 2,
+        "phase": 64,
+        "key": "scene_aa7b"
+      },
+      {
+        "action": "move",
+        "slot": 3,
+        "heading": 0,
+        "speed": 2,
+        "phase": 64,
+        "key": "scene_aa80"
+      },
+      {
+        "action": "move",
+        "slot": 7,
+        "heading": 0,
+        "speed": 2,
+        "phase": 60,
+        "key": "scene_aa85"
+      },
+      {
+        "action": "move",
+        "slot": 5,
+        "heading": 0,
+        "speed": 2,
+        "phase": 60,
+        "key": "scene_aa8a"
+      },
+      {
+        "action": "move",
+        "slot": 8,
+        "heading": 0,
+        "speed": 2,
+        "phase": 64,
+        "key": "scene_aa8f"
+      },
+      {
+        "action": "waitActor",
+        "slot": 5,
+        "key": "scene_aa94"
+      },
+      {
+        "action": "appearance",
+        "slot": 8,
+        "appearance": 243,
+        "key": "scene_aa96"
+      },
+      {
+        "action": "move",
+        "slot": 2,
+        "heading": 0,
+        "speed": 1,
+        "phase": 32,
+        "key": "scene_aa99"
+      },
+      {
+        "action": "move",
+        "slot": 3,
+        "heading": 0,
+        "speed": 1,
+        "phase": 32,
+        "key": "scene_aa9e"
+      },
+      {
+        "action": "move",
+        "slot": 7,
+        "heading": 0,
+        "speed": 1,
+        "phase": 30,
+        "key": "scene_aaa3"
+      },
+      {
+        "action": "move",
+        "slot": 5,
+        "heading": 0,
+        "speed": 1,
+        "phase": 30,
+        "key": "scene_aaa8"
+      },
+      {
+        "action": "move",
+        "slot": 8,
+        "heading": 0,
+        "speed": 1,
+        "phase": 32,
+        "key": "scene_aaad"
+      },
+      {
+        "action": "waitActor",
+        "slot": 8,
+        "key": "scene_aab2"
+      },
+      {
+        "action": "hide",
+        "slot": 8,
+        "key": "scene_aab4"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 237,
+        "key": "scene_aab6"
+      },
+      {
+        "action": "wait",
+        "frames": 16,
+        "key": "scene_aab9"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 238,
+        "key": "scene_aabb"
+      },
+      {
+        "action": "wait",
+        "frames": 16,
+        "key": "scene_aabe"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 239,
+        "key": "scene_aac0"
+      },
+      {
+        "action": "wait",
+        "frames": 16,
+        "key": "scene_aac3"
+      },
+      {
+        "action": "place",
+        "slot": 8,
+        "appearance": 240,
+        "x": 104,
+        "y": 177,
+        "key": "scene_aac5"
+      },
+      {
+        "action": "move",
+        "slot": 8,
+        "heading": 0,
+        "speed": 2,
+        "phase": 24,
+        "key": "scene_aaca"
+      },
+      {
+        "action": "waitActor",
+        "slot": 8,
+        "key": "scene_aacf"
+      },
+      {
+        "action": "place",
+        "slot": 9,
+        "appearance": 241,
+        "x": 104,
+        "y": 169,
+        "key": "scene_aad1"
+      },
+      {
+        "action": "move",
+        "slot": 9,
+        "heading": 0,
+        "speed": 2,
+        "phase": 8,
+        "key": "scene_aad6"
+      },
+      {
+        "action": "waitActor",
+        "slot": 9,
+        "key": "scene_aadb"
+      },
+      {
+        "action": "move",
+        "slot": 9,
+        "heading": 0,
+        "speed": 255,
+        "phase": 255,
+        "key": "scene_aadd"
+      },
+      {
+        "action": "place",
+        "slot": 4,
+        "appearance": 232,
+        "x": 116,
+        "y": 232,
+        "key": "scene_aae2"
+      },
+      {
+        "action": "place",
+        "slot": 6,
+        "appearance": 254,
+        "x": 116,
+        "y": 232,
+        "key": "scene_aae7"
+      },
+      {
+        "action": "move",
+        "slot": 4,
+        "heading": 0,
+        "speed": 3,
+        "phase": 24,
+        "key": "scene_aaec"
+      },
+      {
+        "action": "move",
+        "slot": 6,
+        "heading": 0,
+        "speed": 3,
+        "phase": 24,
+        "key": "scene_aaf1"
+      },
+      {
+        "action": "waitActor",
+        "slot": 4,
+        "key": "scene_aaf6"
+      },
+      {
+        "action": "move",
+        "slot": 4,
+        "heading": 0,
+        "speed": 3,
+        "phase": 24,
+        "key": "scene_aaf8"
+      },
+      {
+        "action": "move",
+        "slot": 6,
+        "heading": 0,
+        "speed": 3,
+        "phase": 24,
+        "key": "scene_aafd"
+      },
+      {
+        "action": "waitActor",
+        "slot": 4,
+        "key": "scene_ab02"
+      },
+      {
+        "action": "place",
+        "slot": 1,
+        "appearance": 253,
+        "x": 116,
+        "y": 184,
+        "key": "scene_ab04"
+      },
+      {
+        "action": "move",
+        "slot": 4,
+        "heading": 0,
+        "speed": 2,
+        "phase": 48,
+        "key": "scene_ab09"
+      },
+      {
+        "action": "move",
+        "slot": 6,
+        "heading": 0,
+        "speed": 2,
+        "phase": 48,
+        "key": "scene_ab0e"
+      },
+      {
+        "action": "move",
+        "slot": 1,
+        "heading": 0,
+        "speed": 2,
+        "phase": 48,
+        "key": "scene_ab13"
+      },
+      {
+        "action": "waitActor",
+        "slot": 4,
+        "key": "scene_ab18"
+      },
+      {
+        "action": "move",
+        "slot": 4,
+        "heading": 0,
+        "speed": 3,
+        "phase": 40,
+        "key": "scene_ab1a"
+      },
+      {
+        "action": "move",
+        "slot": 6,
+        "heading": 0,
+        "speed": 3,
+        "phase": 40,
+        "key": "scene_ab1f"
+      },
+      {
+        "action": "hide",
+        "slot": 1,
+        "key": "scene_ab24"
+      },
+      {
+        "action": "waitActor",
+        "slot": 4,
+        "key": "scene_ab26"
+      },
+      {
+        "action": "place",
+        "slot": 0,
+        "appearance": 252,
+        "x": 248,
+        "y": 216,
+        "key": "scene_ab28"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 6,
+        "speed": 255,
+        "phase": 7,
+        "key": "scene_ab2d"
+      },
+      {
+        "action": "wait",
+        "frames": 4,
+        "key": "scene_ab32"
+      },
+      {
+        "action": "place",
+        "slot": 1,
+        "appearance": 252,
+        "x": 224,
+        "y": 216,
+        "key": "scene_ab34"
+      },
+      {
+        "action": "move",
+        "slot": 1,
+        "heading": 6,
+        "speed": 255,
+        "phase": 7,
+        "key": "scene_ab39"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ab3e"
+      },
+      {
+        "action": "place",
+        "slot": 0,
+        "appearance": 252,
+        "x": 200,
+        "y": 216,
+        "key": "scene_ab40"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 6,
+        "speed": 255,
+        "phase": 7,
+        "key": "scene_ab45"
+      },
+      {
+        "action": "waitActor",
+        "slot": 1,
+        "key": "scene_ab4a"
+      },
+      {
+        "action": "place",
+        "slot": 1,
+        "appearance": 252,
+        "x": 176,
+        "y": 216,
+        "key": "scene_ab4c"
+      },
+      {
+        "action": "move",
+        "slot": 1,
+        "heading": 6,
+        "speed": 255,
+        "phase": 7,
+        "key": "scene_ab51"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ab56"
+      },
+      {
+        "action": "place",
+        "slot": 0,
+        "appearance": 252,
+        "x": 152,
+        "y": 216,
+        "key": "scene_ab58"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 6,
+        "speed": 255,
+        "phase": 7,
+        "key": "scene_ab5d"
+      },
+      {
+        "action": "waitActor",
+        "slot": 1,
+        "key": "scene_ab62"
+      },
+      {
+        "action": "place",
+        "slot": 1,
+        "appearance": 252,
+        "x": 128,
+        "y": 216,
+        "key": "scene_ab64"
+      },
+      {
+        "action": "move",
+        "slot": 1,
+        "heading": 6,
+        "speed": 255,
+        "phase": 7,
+        "key": "scene_ab69"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ab6e"
+      },
+      {
+        "action": "place",
+        "slot": 0,
+        "appearance": 252,
+        "x": 104,
+        "y": 216,
+        "key": "scene_ab70"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 6,
+        "speed": 255,
+        "phase": 7,
+        "key": "scene_ab75"
+      },
+      {
+        "action": "waitActor",
+        "slot": 1,
+        "key": "scene_ab7a"
+      },
+      {
+        "action": "place",
+        "slot": 1,
+        "appearance": 252,
+        "x": 80,
+        "y": 216,
+        "key": "scene_ab7c"
+      },
+      {
+        "action": "move",
+        "slot": 1,
+        "heading": 6,
+        "speed": 255,
+        "phase": 7,
+        "key": "scene_ab81"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ab86"
+      },
+      {
+        "action": "place",
+        "slot": 0,
+        "appearance": 252,
+        "x": 56,
+        "y": 216,
+        "key": "scene_ab88"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 6,
+        "speed": 255,
+        "phase": 7,
+        "key": "scene_ab8d"
+      },
+      {
+        "action": "waitActor",
+        "slot": 1,
+        "key": "scene_ab92"
+      },
+      {
+        "action": "hide",
+        "slot": 1,
+        "key": "scene_ab94"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ab96"
+      },
+      {
+        "action": "place",
+        "slot": 0,
+        "appearance": 176,
+        "x": 108,
+        "y": 188,
+        "key": "scene_ab98"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_ab9d"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_aba2"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 177,
+        "key": "scene_aba4"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_aba7"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_abac"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 178,
+        "key": "scene_abae"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_abb1"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_abb6"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 179,
+        "key": "scene_abb8"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_abbb"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_abc0"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 180,
+        "key": "scene_abc2"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_abc5"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_abca"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 181,
+        "key": "scene_abcc"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_abcf"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_abd4"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 182,
+        "key": "scene_abd6"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_abd9"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_abde"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 183,
+        "key": "scene_abe0"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_abe3"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_abe8"
+      },
+      {
+        "action": "place",
+        "slot": 0,
+        "appearance": 176,
+        "x": 100,
+        "y": 220,
+        "key": "scene_abea"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_abef"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_abf4"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 177,
+        "key": "scene_abf6"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_abf9"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_abfe"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 178,
+        "key": "scene_ac00"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_ac03"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ac08"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 179,
+        "key": "scene_ac0a"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_ac0d"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ac12"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 180,
+        "key": "scene_ac14"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_ac17"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ac1c"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 181,
+        "key": "scene_ac1e"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_ac21"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ac26"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 182,
+        "key": "scene_ac28"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_ac2b"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ac30"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 183,
+        "key": "scene_ac32"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_ac35"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ac3a"
+      },
+      {
+        "action": "place",
+        "slot": 0,
+        "appearance": 176,
+        "x": 132,
+        "y": 204,
+        "key": "scene_ac3c"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_ac41"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ac46"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 177,
+        "key": "scene_ac48"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_ac4b"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ac50"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 178,
+        "key": "scene_ac52"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_ac55"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ac5a"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 179,
+        "key": "scene_ac5c"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_ac5f"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ac64"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 180,
+        "key": "scene_ac66"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_ac69"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ac6e"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 181,
+        "key": "scene_ac70"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_ac73"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ac78"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 182,
+        "key": "scene_ac7a"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_ac7d"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ac82"
+      },
+      {
+        "action": "appearance",
+        "slot": 0,
+        "appearance": 183,
+        "key": "scene_ac84"
+      },
+      {
+        "action": "move",
+        "slot": 0,
+        "heading": 0,
+        "speed": 255,
+        "phase": 3,
+        "key": "scene_ac87"
+      },
+      {
+        "action": "waitActor",
+        "slot": 0,
+        "key": "scene_ac8c"
+      },
+      {
+        "action": "hide",
+        "slot": 0,
+        "key": "scene_ac8e"
+      },
+      {
+        "action": "hide",
+        "slot": 2,
+        "key": "scene_ac90"
+      },
+      {
+        "action": "hide",
+        "slot": 5,
+        "key": "scene_ac92"
+      },
+      {
+        "action": "hide",
+        "slot": 7,
+        "key": "scene_ac94"
+      },
+      {
+        "action": "hide",
+        "slot": 8,
+        "key": "scene_ac96"
+      },
+      {
+        "action": "hide",
+        "slot": 9,
+        "key": "scene_ac98"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 244,
+        "key": "scene_ac9a"
+      },
+      {
+        "action": "wait",
+        "frames": 2,
+        "key": "scene_ac9d"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 245,
+        "key": "scene_ac9f"
+      },
+      {
+        "action": "wait",
+        "frames": 2,
+        "key": "scene_aca2"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 246,
+        "key": "scene_aca4"
+      },
+      {
+        "action": "wait",
+        "frames": 2,
+        "key": "scene_aca7"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 247,
+        "key": "scene_aca9"
+      },
+      {
+        "action": "wait",
+        "frames": 2,
+        "key": "scene_acac"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 248,
+        "key": "scene_acae"
+      },
+      {
+        "action": "wait",
+        "frames": 2,
+        "key": "scene_acb1"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 249,
+        "key": "scene_acb3"
+      },
+      {
+        "action": "wait",
+        "frames": 3,
+        "key": "scene_acb6"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 250,
+        "key": "scene_acb8"
+      },
+      {
+        "action": "wait",
+        "frames": 3,
+        "key": "scene_acbb"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 251,
+        "key": "scene_acbd"
+      },
+      {
+        "action": "wait",
+        "frames": 3,
+        "key": "scene_acc0"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 244,
+        "key": "scene_acc2"
+      },
+      {
+        "action": "wait",
+        "frames": 3,
+        "key": "scene_acc5"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 245,
+        "key": "scene_acc7"
+      },
+      {
+        "action": "wait",
+        "frames": 3,
+        "key": "scene_acca"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 246,
+        "key": "scene_accc"
+      },
+      {
+        "action": "wait",
+        "frames": 3,
+        "key": "scene_accf"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 247,
+        "key": "scene_acd1"
+      },
+      {
+        "action": "wait",
+        "frames": 4,
+        "key": "scene_acd4"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 248,
+        "key": "scene_acd6"
+      },
+      {
+        "action": "wait",
+        "frames": 4,
+        "key": "scene_acd9"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 249,
+        "key": "scene_acdb"
+      },
+      {
+        "action": "wait",
+        "frames": 4,
+        "key": "scene_acde"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 250,
+        "key": "scene_ace0"
+      },
+      {
+        "action": "wait",
+        "frames": 4,
+        "key": "scene_ace3"
+      },
+      {
+        "action": "appearance",
+        "slot": 3,
+        "appearance": 251,
+        "key": "scene_ace5"
+      },
+      {
+        "action": "wait",
+        "frames": 4,
+        "key": "scene_ace8"
+      },
+      {
+        "action": "place",
+        "slot": 3,
+        "appearance": 233,
+        "x": 248,
+        "y": 216,
+        "key": "scene_acea"
+      },
+      {
+        "action": "move",
+        "slot": 3,
+        "heading": 6,
+        "speed": 11,
+        "phase": 255,
+        "key": "scene_acef"
+      },
+      {
+        "action": "waitActor",
+        "slot": 3,
+        "key": "scene_acf4"
+      },
+      {
+        "action": "hide",
+        "slot": 3,
+        "key": "scene_acf6"
+      },
+      {
+        "action": "hide",
+        "slot": 4,
+        "key": "scene_acf8"
+      },
+      {
+        "action": "hide",
+        "slot": 6,
+        "key": "scene_acfa"
+      },
+      {
+        "action": "place",
+        "slot": 0,
+        "appearance": 16,
+        "x": 116,
+        "y": 116,
+        "key": "scene_acfc"
+      },
+      {
+        "action": "place",
+        "slot": 1,
+        "appearance": 0,
+        "x": 116,
+        "y": 116,
+        "key": "scene_ad01"
+      },
+      {
+        "action": "place",
+        "slot": 2,
+        "appearance": 51,
+        "x": 0,
+        "y": 0,
+        "key": "scene_ad06"
+      },
+      {
+        "action": "move",
+        "slot": 2,
+        "heading": 2,
+        "speed": 2,
+        "phase": 2,
+        "key": "scene_ad0b"
+      },
+      {
+        "action": "waitActor",
+        "slot": 2,
+        "key": "scene_ad10"
+      },
+      {
+        "action": "end",
+        "key": "scene_ad12"
+      }
+    ]
+  ],
+  "captions": {
+    "0": [
+      "On June 5, 1944 the United",
+      "Forces began  Landing opera-",
+      "tions on Normandy."
+    ],
+    "1": [
+      "Forces began  Landing opera-",
+      "tions on Normandy."
+    ],
+    "2": [
+      "tions on Normandy."
+    ],
+    "3": [],
+    "4": [
+      "There was but one man to",
+      "carry out this secret",
+      "mission."
+    ],
+    "5": [
+      "carry out this secret",
+      "mission."
+    ],
+    "6": [
+      "mission."
+    ],
+    "7": [],
+    "8": [
+      "His name ..........   Paul,",
+      "the young hero  of  Command",
+      "Unit 88  -  the  top secret",
+      "unit   called  \"Iron Snake\"."
+    ],
+    "9": [
+      "the young hero  of  Command",
+      "Unit 88  -  the  top secret",
+      "unit   called  \"Iron Snake\"."
+    ],
+    "10": [
+      "Unit 88  -  the  top secret",
+      "unit   called  \"Iron Snake\"."
+    ],
+    "11": [
+      "unit   called  \"Iron Snake\"."
+    ],
+    "12": [],
+    "13": [
+      "This mission was to be his",
+      "most dangerous  assignment.",
+      "What would become of him ?",
+      "Would he follow his orders?"
+    ],
+    "14": [
+      "most dangerous  assignment.",
+      "What would become of him ?",
+      "Would he follow his orders?"
+    ],
+    "15": [
+      "What would become of him ?",
+      "Would he follow his orders?"
+    ],
+    "16": [
+      "Would he follow his orders?"
+    ],
+    "17": [],
+    "18": [
+      "- Art Design -",
+      "Hideki Fujiwara",
+      "Isamu Kawasaki"
+    ],
+    "19": [
+      "Hideki Fujiwara",
+      "Isamu Kawasaki"
+    ],
+    "20": [
+      "Isamu Kawasaki"
+    ],
+    "21": [],
+    "22": [
+      "Osamu Kamada",
+      "Junko Satoh"
+    ],
+    "23": [
+      "Junko Satoh"
+    ],
+    "24": [],
+    "25": [
+      "- Program -",
+      "Yukio Kaneda",
+      " "
+    ],
+    "26": [
+      "Yukio Kaneda",
+      " "
+    ],
+    "27": [
+      " "
+    ],
+    "28": [],
+    "29": [
+      "- Music Effect -",
+      "Masakazu Yuasa",
+      "Toshikazu Tanaka",
+      "Kazuhiro Nishida"
+    ],
+    "30": [
+      "Masakazu Yuasa",
+      "Toshikazu Tanaka",
+      "Kazuhiro Nishida"
+    ],
+    "31": [
+      "Toshikazu Tanaka",
+      "Kazuhiro Nishida"
+    ],
+    "32": [
+      "Kazuhiro Nishida"
+    ],
+    "33": [],
+    "34": [
+      "- Planning -",
+      "Toshiyuki Nakai",
+      "Kohzi Obata",
+      " "
+    ],
+    "35": [
+      "Toshiyuki Nakai",
+      "Kohzi Obata",
+      " "
+    ],
+    "36": [
+      "Kohzi Obata",
+      " "
+    ],
+    "37": [
+      " "
+    ],
+    "38": [],
+    "39": [
+      "- Produce -",
+      "Eikichi Kawasaki",
+      " "
+    ],
+    "40": [
+      "Eikichi Kawasaki",
+      " "
+    ],
+    "41": [
+      " "
+    ],
+    "42": [],
+    "43": [
+      "- Special Thanks -",
+      "Kazuto Kouno",
+      "Minoru Shiota"
+    ],
+    "44": [
+      "Kazuto Kouno",
+      "Minoru Shiota"
+    ],
+    "45": [
+      "Minoru Shiota"
+    ],
+    "46": [],
+    "47": [
+      "Jim Hernandez",
+      "Jamil Bunker",
+      "Kituteru Kita"
+    ],
+    "48": [
+      "Jamil Bunker",
+      "Kituteru Kita"
+    ],
+    "49": [
+      "Kituteru Kita"
+    ],
+    "50": [],
+    "51": [
+      "In  1945  enemies  of  the",
+      "United  Forces  signed  the",
+      "document  of  surrender."
+    ],
+    "52": [
+      "United  Forces  signed  the",
+      "document  of  surrender."
+    ],
+    "53": [
+      "document  of  surrender."
+    ],
+    "54": [],
+    "55": [
+      " ",
+      "0123456789:;<=>?^_",
+      " ",
+      " "
+    ],
+    "56": [
+      "0123456789:;<=>?^_",
+      " ",
+      " "
+    ],
+    "57": [
+      " ",
+      " "
+    ],
+    "58": [
+      " "
+    ],
+    "59": [],
+    "60": [
+      " "
+    ],
+    "61": [],
+    "62": [],
+    "63": [
+      " "
+    ],
+    "64": [],
+    "65": [
+      " ",
+      "0123456789:;<=>?",
+      " ",
+      " "
+    ],
+    "66": [
+      "0123456789:;<=>?",
+      " ",
+      " "
+    ],
+    "67": [
+      " ",
+      " "
+    ],
+    "68": [
+      " "
+    ],
+    "69": []
+  },
+  "slides": {
+    "wait": [
+      {
+        "action": "wait",
+        "frames": 120
+      }
+    ],
+    "attract": [
+      {
+        "action": "wait",
+        "frames": 240
+      },
+      {
+        "action": "wait",
+        "frames": 240
+      },
+      {
+        "action": "illustration",
+        "id": 7
+      },
+      {
+        "action": "caption",
+        "id": 0
+      },
+      {
+        "action": "fade",
+        "variant": 12,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 240
+      },
+      {
+        "action": "wait",
+        "frames": 240
+      },
+      {
+        "action": "fade",
+        "variant": 48,
+        "frames": 16
+      },
+      {
+        "action": "caption",
+        "id": 4
+      },
+      {
+        "action": "fade",
+        "variant": 32,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 240
+      },
+      {
+        "action": "wait",
+        "frames": 210
+      },
+      {
+        "action": "fade",
+        "variant": 8,
+        "frames": 16
+      },
+      {
+        "action": "illustration",
+        "id": 8
+      },
+      {
+        "action": "caption",
+        "id": 8
+      },
+      {
+        "action": "fade",
+        "variant": 4,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 240
+      },
+      {
+        "action": "wait",
+        "frames": 230
+      },
+      {
+        "action": "fade",
+        "variant": 16,
+        "frames": 16
+      },
+      {
+        "action": "caption",
+        "id": 13
+      },
+      {
+        "action": "fade",
+        "variant": 0,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 240
+      },
+      {
+        "action": "wait",
+        "frames": 240
+      },
+      {
+        "action": "wait",
+        "frames": 180
+      },
+      {
+        "action": "wait",
+        "frames": 30
+      },
+      {
+        "action": "fade",
+        "variant": 0,
+        "frames": 16
+      }
+    ],
+    "conclusion": [
+      {
+        "action": "illustration",
+        "id": 0
+      },
+      {
+        "action": "fade",
+        "variant": 12,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 60
+      },
+      {
+        "action": "fade",
+        "variant": 48,
+        "frames": 16
+      },
+      {
+        "action": "caption",
+        "id": 51
+      },
+      {
+        "action": "fade",
+        "variant": 32,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 255
+      },
+      {
+        "action": "wait",
+        "frames": 1
+      },
+      {
+        "action": "fade",
+        "variant": 8,
+        "frames": 16
+      }
+    ],
+    "credits": [
+      {
+        "action": "illustration",
+        "id": 1
+      },
+      {
+        "action": "caption",
+        "id": 55
+      },
+      {
+        "action": "fade",
+        "variant": 4,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 256
+      },
+      {
+        "action": "wait",
+        "frames": 256
+      },
+      {
+        "action": "fade",
+        "variant": 0,
+        "frames": 16
+      },
+      {
+        "action": "illustration",
+        "id": 2
+      },
+      {
+        "action": "caption",
+        "id": 18
+      },
+      {
+        "action": "fade",
+        "variant": 12,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 256
+      },
+      {
+        "action": "fade",
+        "variant": 48,
+        "frames": 16
+      },
+      {
+        "action": "caption",
+        "id": 22
+      },
+      {
+        "action": "fade",
+        "variant": 32,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 256
+      },
+      {
+        "action": "fade",
+        "variant": 8,
+        "frames": 16
+      },
+      {
+        "action": "illustration",
+        "id": 3
+      },
+      {
+        "action": "caption",
+        "id": 25
+      },
+      {
+        "action": "fade",
+        "variant": 12,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 256
+      },
+      {
+        "action": "fade",
+        "variant": 48,
+        "frames": 16
+      },
+      {
+        "action": "caption",
+        "id": 29
+      },
+      {
+        "action": "fade",
+        "variant": 32,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 256
+      },
+      {
+        "action": "fade",
+        "variant": 8,
+        "frames": 16
+      },
+      {
+        "action": "illustration",
+        "id": 4
+      },
+      {
+        "action": "caption",
+        "id": 34
+      },
+      {
+        "action": "fade",
+        "variant": 4,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 256
+      },
+      {
+        "action": "fade",
+        "variant": 16,
+        "frames": 16
+      },
+      {
+        "action": "caption",
+        "id": 39
+      },
+      {
+        "action": "fade",
+        "variant": 0,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 256
+      },
+      {
+        "action": "fade",
+        "variant": 0,
+        "frames": 16
+      },
+      {
+        "action": "illustration",
+        "id": 5
+      },
+      {
+        "action": "caption",
+        "id": 43
+      },
+      {
+        "action": "fade",
+        "variant": 12,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 256
+      },
+      {
+        "action": "fade",
+        "variant": 48,
+        "frames": 16
+      },
+      {
+        "action": "caption",
+        "id": 47
+      },
+      {
+        "action": "fade",
+        "variant": 32,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 256
+      },
+      {
+        "action": "fade",
+        "variant": 8,
+        "frames": 16
+      },
+      {
+        "action": "illustration",
+        "id": 6
+      },
+      {
+        "action": "caption",
+        "id": 60
+      },
+      {
+        "action": "fade",
+        "variant": 4,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 256
+      },
+      {
+        "action": "fade",
+        "variant": 16,
+        "frames": 16
+      },
+      {
+        "action": "caption",
+        "id": 65
+      },
+      {
+        "action": "fade",
+        "variant": 0,
+        "frames": 16
+      },
+      {
+        "action": "wait",
+        "frames": 256
+      }
+    ]
+  }
+}

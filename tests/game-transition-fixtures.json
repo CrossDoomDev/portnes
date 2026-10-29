@@ -1,0 +1,28 @@
+{
+  "scenarios": [
+    {
+      "scenario": 8,
+      "frames": 128,
+      "randomCalls": 0,
+      "sha256": "472e9e0c22bd03bedad3d7b0716d35a2bd2e2e336084bdebec3d3ee712fbb702"
+    },
+    {
+      "scenario": 9,
+      "frames": 128,
+      "randomCalls": 0,
+      "sha256": "ddc46a49ebbf74da80f93a16bc015f959bbea8575f04a6990dfc1414024d8f90"
+    },
+    {
+      "scenario": 10,
+      "frames": 128,
+      "randomCalls": 0,
+      "sha256": "e2607d81a20fc3fcb60eb0789ef379eda59f71ccc312eace2c07b71cfcd4538a"
+    },
+    {
+      "scenario": 11,
+      "frames": 128,
+      "randomCalls": 12,
+      "sha256": "40b6eee655afb0a53605717248cf5534ed72eee142eddb8fc949129eb5da839a"
+    }
+  ]
+}

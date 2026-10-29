@@ -1,0 +1,29 @@
+{
+  "seed": 63483,
+  "aiming": {
+    "cases": 12000,
+    "sha256": "902afe70536a0aff220c215dbc3c203b98a972467345c222cfc397e895c45f14"
+  },
+  "spawns": [
+    {
+      "scenario": 0,
+      "cases": 5468,
+      "sha256": "5812c6a294f1194d9e3e00c05c19a8c5619b6b25db138ed85ca9ccc37b6426b7"
+    },
+    {
+      "scenario": 1,
+      "cases": 5468,
+      "sha256": "3fa6ff97b7b9ae1659d13707efc1f8e4d069cbb2b76d209e8da8f92b2bfacdc2"
+    },
+    {
+      "scenario": 2,
+      "cases": 5468,
+      "sha256": "974b135d16bdb8fe92d5f969605352dccd4248c8ad25a2efacca9815b5c0e67e"
+    },
+    {
+      "scenario": 3,
+      "cases": 5468,
+      "sha256": "854c8f9acf8fdeb2fef05eae86e45a23a88ea5b5ddff991e5487408bda093457"
+    }
+  ]
+}
