@@ -1,0 +1,97 @@
+{
+  "seed": 48329,
+  "helpers": [
+    {
+      "name": "probe",
+      "cases": 2048,
+      "sha256": "52dbf3118e4d3b7d70426bb80d71ce7c25e16f14aaca1d2ad1874066ff2ee086"
+    },
+    {
+      "name": "longProbe",
+      "cases": 2048,
+      "sha256": "262e0dd04e60c5cedc329f62352c56a9fc5550dc93d684fbe91b4ad4dc3720f6"
+    },
+    {
+      "name": "turn",
+      "cases": 1024,
+      "sha256": "326c118c0f9e72224703bf22df788552110a4463a7b855d5c674faa9198613ff"
+    },
+    {
+      "name": "chooseTurn",
+      "cases": 1024,
+      "sha256": "772e4b83af362d0f76f87fed831e94a386da74e14e2f8acdc9aa46dcf7e4eaa0"
+    },
+    {
+      "name": "move",
+      "cases": 1024,
+      "sha256": "a16c593beb678b39f112c3c00b8d991629f310865af37e683e3f0efa5e58982c"
+    },
+    {
+      "name": "weaponPause",
+      "cases": 1024,
+      "sha256": "00a17d8329610232bf2c4c2b7e11c48a12b5a9bb2c7d1cfdb831f6cd45cb49a0"
+    }
+  ],
+  "handlers": [
+    {
+      "entry": "dc6e",
+      "kind": 36,
+      "cases": 1024,
+      "sha256": "e0455a499922273a23485fdf2868435f8687943682e2e263e47293edcfd4338a"
+    },
+    {
+      "entry": "dd4e",
+      "kind": 37,
+      "cases": 1024,
+      "sha256": "ce04d53a9517871af35afca495a4857d1b2be0ced8e61b6dec9ff101fee6b324"
+    },
+    {
+      "entry": "ddac",
+      "kind": 38,
+      "cases": 1024,
+      "sha256": "18e9f728f05d156db5701f31aa2cc083a8473e118c7d7d7c4ac6a945c2ca842e"
+    },
+    {
+      "entry": "ddd3",
+      "kind": 39,
+      "cases": 1024,
+      "sha256": "be6bb489f43b150fbb0a4ab20e29c813f1d239762da94c2548fc48e5dd6c73c9"
+    },
+    {
+      "entry": "ddec",
+      "kind": 40,
+      "cases": 1024,
+      "sha256": "784f43803f72a9665375ffbf621514a1a277580c85ad93ba23fd8ba99cb146d4"
+    },
+    {
+      "entry": "de0b",
+      "kind": 34,
+      "cases": 1024,
+      "sha256": "f5b0d418b5e191a963bdaedabbef668fd5915fde03534095a965b3f7723ea54f"
+    },
+    {
+      "entry": "de43",
+      "kind": 33,
+      "cases": 1024,
+      "sha256": "8ab00ce7aaa948455f8cd44eadecb5f0e953d8bf68b9bdf8fd1326ff8638f9f6"
+    },
+    {
+      "entry": "de64",
+      "kind": 56,
+      "cases": 1024,
+      "sha256": "12e8d0470fc48be27b38627c50f145200605dfe3b213f5729719043f2d34f970"
+    },
+    {
+      "entry": "de88",
+      "kind": 32,
+      "cases": 1024,
+      "sha256": "4cc93349a079bb9ea6a7406373d43a9e65e10dfb6d126290044e378d9a07ec3d"
+    },
+    {
+      "entry": "db9c",
+      "kind": 63,
+      "cases": 1024,
+      "sha256": "ec824b6b2199d44eacd36ec41beeb0bfa3ad50e22e1ccf49a5150c2fc88461b2"
+    }
+  ]
+}

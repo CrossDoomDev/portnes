@@ -1,0 +1,52 @@
+{
+  "scenarios": [
+    {
+      "index": 0,
+      "frames": 512,
+      "randomCalls": 11,
+      "sha256": "b832fe6ec6bbe4fa9c602476649739642ffe4d5e4bcd483c0c9482b0b493483a"
+    },
+    {
+      "index": 1,
+      "frames": 512,
+      "randomCalls": 2,
+      "sha256": "933cd7373763c1b2bdf887c87ac2355504cf56acf8e5cec483ed6eba9da96e68"
+    },
+    {
+      "index": 2,
+      "frames": 512,
+      "randomCalls": 10,
+      "sha256": "e2b7ab6aad50f53600d2ac9d446335da402d41bc72283a3c281ea96b8660a229"
+    },
+    {
+      "index": 3,
+      "frames": 512,
+      "randomCalls": 4,
+      "sha256": "cba08ea92ae03dc04d61b1fac946c3197a475d77f0e272ad1e3b62130a885508"
+    },
+    {
+      "index": 4,
+      "frames": 512,
+      "randomCalls": 7,
+      "sha256": "10e68f6bd1b2d61d9f0ca12e041d9d09bed3bddbcf0d545b2f6b5af4b1f7ce6a"
+    },
+    {
+      "index": 5,
+      "frames": 512,
+      "randomCalls": 16,
+      "sha256": "db4ee6374a1fb2ceb6dc2896c5925901f29e6ef1259d150b89f7df365f773f7c"
+    },
+    {
+      "index": 6,
+      "frames": 512,
+      "randomCalls": 10,
+      "sha256": "823314d55de50b2f1cd221a33e7cba8473408eca990f2b3e453ea7d5ff0505de"
+    },
+    {
+      "index": 7,
+      "frames": 512,
+      "randomCalls": 4,
+      "sha256": "707d9fb58c03b9fbbca53ebe10f1f95a332a4a72db4649a7926755e78c84667b"
+    }
+  ]
+}
